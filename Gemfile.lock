@@ -96,10 +96,11 @@ GEM
     cucumber-html-formatter (19.2.0)
       cucumber-messages (~> 18.0, >= 18.0.0)
     cucumber-messages (18.0.0)
-    cucumber-rails (1.0.6)
-      capybara (>= 1.1.1)
-      cucumber (>= 1.0.6)
+    cucumber-rails (1.4.0)
+      capybara (>= 1.1.2)
+      cucumber (>= 1.2.0)
       nokogiri (>= 1.5.0)
+      rails (>= 3.0.0)
     cucumber-tag-expressions (4.1.0)
     database_cleaner (1.4.1)
     diff-lcs (1.5.0)
@@ -292,7 +293,7 @@ DEPENDENCIES
   capybara (= 2.4.4)
   chromedriver-helper
   coffee-rails (~> 4.2)
-  cucumber-rails (< 1.1.0)
+  cucumber-rails
   database_cleaner (= 1.4.1)
   guard-rspec
   jbuilder (~> 2.5)

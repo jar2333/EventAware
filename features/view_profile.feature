@@ -28,7 +28,7 @@ Scenario: Go to profile of someone I follow
     And I am in my profile
     But I view my following list
     Then I should see "sa4084"
-    And I press the name of the user "sa4084" I follow
+    And I press the name of the user "sa4084" who I follow
     Then I should be in the profile for user "sa4084"
 
 Scenario: Go to profile of someone who follows me

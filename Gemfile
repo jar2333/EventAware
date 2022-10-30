@@ -48,7 +48,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   gem 'database_cleaner', '1.4.1'
-  gem 'cucumber-rails', '< 1.1.0'
+  gem 'cucumber-rails'
   gem 'guard-rspec'
 
   gem 'pry'
