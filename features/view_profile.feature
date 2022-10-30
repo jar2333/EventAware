@@ -18,8 +18,8 @@ Scenario: Go to my profile from the home page
 
 Scenario: Go to profile of event organizer
 
-    Given I am on an event page created by "sa4084"
-    Then I should see "organizer"
+    Given I am on an event page
+    And the event creator is "sa4084"
     When I press the event creator name
     Then I should be in the profile for user "sa4084"
 

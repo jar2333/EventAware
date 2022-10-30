@@ -1,4 +1,4 @@
-Then /I (should be|am) in the profile (for user)? "(.*)"/ do |uni| 
+Then /I (should be|am) in the profile( for user)? "(.*)"/ do |uni| 
 
 end
 
