@@ -4,11 +4,17 @@ Feature: View the profile of an existing user
     So I can join events with friends
     I want to see events my friend is attending or organizing
 
-Background: A friend is a user on the platform
+Background: Both me and a friend are users on the platform
 
     Given I am logged in as "jar2333"
     And I follow "sa4084"
     And "sa4084" follows me
+
+Scenario: Go to my profile from the home page
+
+    Given I am in my home page
+    And I click the profile tab
+    Then I should be in the profile for user "jar2333"
 
 Scenario: Go to profile of event organizer
 

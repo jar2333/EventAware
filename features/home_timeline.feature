@@ -3,31 +3,25 @@ Feature: View timeline of events in home page
     As a user seeking to participate in events
     I want to quickly see events happening close to me in time and place
 
-Background: A friend is a user on the platform
+Background: I am a registered user in the home page
 
     Given I am logged in as "jar2333"
-    And I follow "sa4084"
-    And "sa4084" follows me
+    And I am in my home page
+    And there are events created
 
-Scenario: Go to profile of event organizer
+Scenario: All upcoming events show up
+    Given there exists an upcoming event with title "Halloween Party"
+    And there exists an upcoming event with title "Birthday Party"
+    Then I should see "Halloween Party"
+    And I should see "Birthday Party"
 
-    Given I am on an event page created by "sa4084"
-    Then I should see "organizer"
-    When I press the event creator name
-    Then I should be in the profile for user "sa4084"
+Scenario: Events that already occurred do not show up
+    Given there exists an upcoming event with title "Halloween Party"
+    And the event with title "New Years Party" has passed
+    Then I should see "Halloween Party"
+    And I should not see "New Years Party"
 
-Scenario: Go to profile of someone I follow
-
-    And I am in my profile
-    But I view my following list
-    Then I should see "sa4084"
-    And I press the name of the user "sa4084" I follow
-    Then I should be in the profile for user "sa4084"
-
-Scenario: Go to profile of someone who follows me
-
-    And I am in my profile
-    But I view my followers list
-    Then I should see "sa4084"
-    And I press the name of the user "sa4084" who follows me
-    Then I should be in the profile for user "sa4084"
+Scenario: Search for upcoming events by title substring
+    Given there exists an upcoming event with title "Halloween Party"
+    And I search for "Hall"
+    Then I should see "Halloween Party"
