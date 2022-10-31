@@ -1,7 +1,8 @@
 Feature: View timeline of events in home page
 
     As a user seeking to participate in events
-    I want to quickly see events happening close to me in time and place
+    I want to filter events happening close to me in time and place
+    So I use the search feature in the home timeline
 
 Background: I am a registered user in the home page
 
@@ -31,3 +32,6 @@ Scenario: Search for upcoming events by title substring
     But I search for "Hall"
     Then I should see an event with title "Halloween Party"
     And I should not see "Birthday Party"
+
+@wip
+Scenario: The events are ordered chronologically

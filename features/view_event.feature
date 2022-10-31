@@ -15,6 +15,14 @@ Scenario: Go to event info for an event in home page
     Then I am on an event page 
     And the event title should be "Halloween Party"
 
+Scenario: Go to event info for an event in profile page
+
+    Given I am in the profile for user "jar2333"
+    And there is an upcoming event with creator "jar2333" and title "Halloween Party"
+    And I do see an event with creator "jar2333" and title "Halloween Party"
+    Then I click the event with title "Halloween Party"
+    Then I am on an event page 
+    And the event title should be "Halloween Party"
 
 
     
