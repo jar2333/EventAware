@@ -7,7 +7,7 @@ Background: I am a registered user in the home page
 
     Given I am logged in as "jar2333"
     And I am in my home page
-    And there are events created
+    And there exist created events
 
 Scenario: All upcoming events show up
 
