@@ -2,7 +2,7 @@
 # Concerns event page
 #
 
-#merge to one step later (interaction steps)
+#merge to one step later (page interaction steps)
 Given /I (am|should be) on an event page/ do
 
 end
@@ -23,7 +23,10 @@ And /I (press|click) the (attend|register) button/ do
 
 end
 
-#merge to one step later (information steps)
+But /I (press|click) the edit button/ do
+end
+
+#merge to one step later (page information steps)
 Given /the event (creator|organizer) (is|should be) "(.*)"/ do |uni|
 
 end
