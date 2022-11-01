@@ -59,6 +59,18 @@ registrations = [{:user_id=>'sa4084',:event_id=>'E01'},
         {:user_id=>'rt6789',:event_id=>'E06'},
         {:user_id=>'ds2387',:event_id=>'E08'},
         {:user_id=>'br2346',:event_id=>'E08'},
+        {:user_id=>'sa4048',:event_id=>'E02'},
+        {:user_id=>'rt6789',:event_id=>'E02'},
+        {:user_id=>'jar2333',:event_id=>'E01'},
+        {:user_id=>'sa4084',:event_id=>'E02'},
+        {:user_id=>'sr5677',:event_id=>'E03'},
+        {:user_id=>'trj2122',:event_id=>'E04'},
+        {:user_id=>'ds2387',:event_id=>'E06'},
+        {:user_id=>'jar2333',:event_id=>'E07'},
+        {:user_id=>'rt6789',:event_id=>'E05'},
+        {:user_id=>'trj2122',:event_id=>'E08'},
+        {:user_id=>'sr5677',:event_id=>'E09'},
+        {:user_id=>'ds2387',:event_id=>'E10'},
 ]
 registrations.each do |registration|
     Registration.create!(registration)
