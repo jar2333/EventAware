@@ -28,8 +28,10 @@ ActiveRecord::Schema.define(version: 2022_11_01_204252) do
     t.string "event_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.text "uni"
+  create_table "users", id: false, force: :cascade do |t|
+    t.string "user_id"
+    t.string "name"
+    t.string "uni"
   end
 
 end
