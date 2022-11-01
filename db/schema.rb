@@ -33,10 +33,11 @@ ActiveRecord::Schema.define(version: 2022_11_01_210752) do
     t.string "follower_id"
   end
 
-  create_table "messages", force: :cascade do |t|
+  create_table "messages", id: false, force: :cascade do |t|
+    t.string "message_id"
     t.string "user_id"
     t.string "event_id"
-    t.datetime "date"
+    t.datetime "date_posted"
     t.string "content"
   end
 

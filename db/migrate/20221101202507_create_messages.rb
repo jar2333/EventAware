@@ -4,7 +4,7 @@ class CreateMessages < ActiveRecord::Migration[5.2]
       t.string :message_id
       t.string :user_id
       t.string :event_id
-      t.datetime :date
+      t.datetime :date_posted
       t.string :content
     end
   end
