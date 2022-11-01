@@ -19,7 +19,7 @@ And /I (press|click) the event chat (button|link)/ do
 
 end
 
-And /I (press|click) the (attend|register) button do
+And /I (press|click) the (attend|register) button/ do
 
 end
 
