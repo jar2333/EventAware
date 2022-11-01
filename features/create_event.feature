@@ -22,10 +22,10 @@ Scenario: I create an event from the home page
     And I enter "Alma Mater" in the location field
     And I enter "100" in the seats field
     But I click the confirm button
-    Then I shoud be on an event page
+    Then I should be on an event page
     And the event organizer should be "jar2333"
     And the event title should be "Movie Screening"
-    And there exists event with title "Movie Screening"
+    And there exists an event with title "Movie Screening"
 
 
 

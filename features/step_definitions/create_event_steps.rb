@@ -5,5 +5,6 @@ end
 Given /I (press|click) the create event button/ do 
 end
 
-Then /I enter "(*.)" in the (*.) field/ do |text, field|
+Then /I enter "(.*)" in the (.*) field/ do |text, field|
 end
+
