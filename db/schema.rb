@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_01_204252) do
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2022_11_01_210752) do
 
   create_table "authentications", force: :cascade do |t|
     t.string "user_id"
@@ -18,18 +19,46 @@ ActiveRecord::Schema.define(version: 2022_11_01_204252) do
     t.string "auth_token"
   end
 
-  create_table "followers", force: :cascade do |t|
+  create_table "events", id: false, force: :cascade do |t|
+    t.string "event_id"
+    t.string "organizer"
+    t.string "title"
+    t.string "description"
+    t.datetime "date_posted"
+    t.datetime "start_date"
+    t.datetime "end_date"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "user_id"
+    t.string "event_id"
+    t.datetime "date"
+    t.string "content"
+  end
+=======
+ActiveRecord::Schema.define(version: 2022_11_01_204252) do
+>>>>>>> 4f6d2beaf344040c8b8d8c00b30c6b81589b0caf
+
+  create_table "authentications", id: false, force: :cascade do |t|
+    t.string "user_id"
+    t.string "auth_hash"
+    t.string "auth_token"
+  end
+
+  create_table "followers", id: false, force: :cascade do |t|
     t.string "user_id"
     t.string "follower_id"
   end
 
-  create_table "registrations", force: :cascade do |t|
+  create_table "registrations", id: false, force: :cascade do |t|
     t.string "user_id"
     t.string "event_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.text "uni"
+  create_table "users", id: false, force: :cascade do |t|
+    t.string "user_id"
+    t.string "name"
+    t.string "uni"
   end
 
 end
