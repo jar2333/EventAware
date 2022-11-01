@@ -19,6 +19,10 @@ And /I (press|click) the event chat (button|link)/ do
 
 end
 
+And /I (press|click) the (attend|register) button do
+
+end
+
 #merge to one step later (information steps)
 Given /the event (creator|organizer) (is|should be) "(.*)"/ do |uni|
 
@@ -28,12 +32,14 @@ Given /the event title (is|should be) "(.*)"/ do |title|
 
 end
 
+Then /I am( not)? registered/ do |n|
+end
 
 #
 # Concerns event elements in html
 #
 
-Given /I (do|should) see an event with (.*)$/ do |fields|
+Given /I (do|should)( not)? see an event with (.*)$/ do |n, fields|
     
 end
 

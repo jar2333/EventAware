@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_30_191740) do
+ActiveRecord::Schema.define(version: 2022_10_31_071104) do
+
+  create_table "authentications", force: :cascade do |t|
+    t.string "user_id"
+    t.string "auth_hash"
+    t.string "auth_token"
+  end
 
   create_table "users", force: :cascade do |t|
     t.text "uni"
