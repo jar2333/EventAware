@@ -1,8 +1,8 @@
-And /I follow "(.*)"/ do |uni|
+And /I( do not)? follow "(.*)"/ do |n, uni|
     
 end
 
-And /"(.*)" follows me/ do |uni|
+And /"(.*)" does( not)? follow me/ do |n, uni|
     
 end
 

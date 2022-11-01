@@ -8,7 +8,7 @@ Background: Both me and a friend are users on the platform
 
     Given I am logged in as "jar2333"
     And I follow "sa4084"
-    And "sa4084" follows me
+    And "sa4084" does follow me
 
 Scenario: Go to my profile from the home page
 
