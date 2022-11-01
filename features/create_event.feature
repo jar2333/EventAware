@@ -10,6 +10,7 @@ Background: I am a user on EventAware
 Scenario: I create an event from the home page
 
     Given I am in my home page
+    And there does not exist an event with title "Movie Screening"
     And I press the create event button
     Then I am on a create event page
     And I enter "Movie Screening" in the title field
@@ -24,7 +25,8 @@ Scenario: I create an event from the home page
     Then I shoud be on an event page
     And the event organizer should be "jar2333"
     And the event title should be "Movie Screening"
-    
+    And there exists event with title "Movie Screening"
+
 
 
 
