@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2022_11_01_210752) do
 
-  create_table "authentications", force: :cascade do |t|
+  create_table "authentications", id: false, force: :cascade do |t|
     t.string "user_id"
     t.string "auth_hash"
     t.string "auth_token"
@@ -29,25 +28,16 @@ ActiveRecord::Schema.define(version: 2022_11_01_210752) do
     t.datetime "end_date"
   end
 
+  create_table "followers", id: false, force: :cascade do |t|
+    t.string "user_id"
+    t.string "follower_id"
+  end
+
   create_table "messages", force: :cascade do |t|
     t.string "user_id"
     t.string "event_id"
     t.datetime "date"
     t.string "content"
-  end
-=======
-ActiveRecord::Schema.define(version: 2022_11_01_204252) do
->>>>>>> 4f6d2beaf344040c8b8d8c00b30c6b81589b0caf
-
-  create_table "authentications", id: false, force: :cascade do |t|
-    t.string "user_id"
-    t.string "auth_hash"
-    t.string "auth_token"
-  end
-
-  create_table "followers", id: false, force: :cascade do |t|
-    t.string "user_id"
-    t.string "follower_id"
   end
 
   create_table "registrations", id: false, force: :cascade do |t|
