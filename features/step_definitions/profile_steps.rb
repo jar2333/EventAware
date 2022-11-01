@@ -18,5 +18,6 @@ Then /I view my followers list/ do
     steps %Q{ Then I press "followers" }
 end
 
-Then /I click the home (button|tab)/ do
+Given /I (press|click) the profile (button|tab)/ do
+
 end

@@ -24,6 +24,12 @@ Scenario: Go to event info for an event in profile page
     Then I am on an event page 
     And the event title should be "Halloween Party"
 
+Scenario: Go to event info from the event's chat room
+
+    Given I am in a chat page
+    And I click the back button
+    Then I should be on an event page
+
 
     
     

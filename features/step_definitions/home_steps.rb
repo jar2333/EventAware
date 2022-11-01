@@ -6,6 +6,5 @@ Given /I search for "(.*)"/ do |search_term|
 
 end
 
-Given /I click the profile (button|tab)/ do
-
+Then /I (press|click) the home (button|tab)/ do
 end
