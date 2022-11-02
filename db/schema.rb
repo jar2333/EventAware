@@ -28,19 +28,20 @@ ActiveRecord::Schema.define(version: 2022_11_01_210752) do
     t.datetime "end_date"
   end
 
-  create_table "followers", force: :cascade do |t|
+  create_table "followers", id: false, force: :cascade do |t|
     t.string "user_id"
     t.string "follower_id"
   end
 
-  create_table "messages", force: :cascade do |t|
+  create_table "messages", id: false, force: :cascade do |t|
+    t.string "message_id"
     t.string "user_id"
     t.string "event_id"
-    t.datetime "date"
+    t.datetime "date_posted"
     t.string "content"
   end
 
-  create_table "registrations", force: :cascade do |t|
+  create_table "registrations", id: false, force: :cascade do |t|
     t.string "user_id"
     t.string "event_id"
   end
