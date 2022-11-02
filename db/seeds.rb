@@ -34,7 +34,7 @@ users = [{:user_id=>'sa4084',:name=>'Mark',:uni=>'mar4048'},
         {:user_id=>'ma4987',:name=>'Michael',:uni=>'mc5678'},
         {:user_id=>'sa4567',:name=>'Sal',:uni=>'sl6048'},
         {:user_id=>'trj2122',:name=>'Tarang',:uni=>'ta4577'},
-        {:user_id=>'sr5677',:name=>'Surya',:uni=>'sr2348'},
+        {:user_id=>'sr5677',:name=>'Sam',:uni=>'sr2348'},
         {:user_id=>'rt6789',:name=>'Rick',:uni=>'rk3248'},
         {:user_id=>'ds2387',:name=>'Dan',:uni=>'dn3448'},
         {:user_id=>'br2346',:name=>'Bob',:uni=>'bb5678'},
@@ -42,7 +42,7 @@ users = [{:user_id=>'sa4084',:name=>'Mark',:uni=>'mar4048'},
 users.each do |user|
     User.create!(user)
 end
-authentications = [{:user_id=>'sa4084',:auth_hash=>'908ae7744c1eb15156cd4a81248fc2a6',:auth_token=>'1644b7d8de472cc3b5c3f9e2674200a22ea0b17d'},
+authentications = [{:user_id=>'sa4084',:auth_hash=>'8a9d093f14f8701df17732b2bb182c74',:auth_token=>'1644b7d8de472cc3b5c3f9e2674200a22ea0b17d'},
         {:user_id=>'jar2333',:auth_hash=>'b79ebc82ee77524b087c22b313899ba6',:auth_token=>'4bf154e3f3721ce55f0aa3ae78adfc42117e1be1'},
         {:user_id=>'aj3087',:auth_hash=>'891083cbbac58d67474b77c574666a82',:auth_token=>'c52a40ced2fced7e0fca9f97e03184f4e9883f51'},
         {:user_id=>'ma4987',:auth_hash=>'a69492170300a3d505d9e9878ba0ed2f',:auth_token=>'d5281e56903a969f77f1be6777a0a12f72054e6b'},

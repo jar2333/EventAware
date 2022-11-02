@@ -24,4 +24,4 @@ Scenario: I edit the title of an event I created
 Scenario: I cannot edit an event I did not create
 
     Given the event creator is "sa4084"
-    Then I do not see "edit"
+    Then I should not see "edit"
