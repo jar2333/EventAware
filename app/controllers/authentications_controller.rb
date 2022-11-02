@@ -3,6 +3,7 @@ class AuthenticationsController < ApplicationController
   end
 
   def new
+    render 'frontend/login'
   end
 
   def destroy

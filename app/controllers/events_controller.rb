@@ -1,11 +1,14 @@
 class EventsController < ApplicationController
   def new
+    render 'frontend/create'
   end
 
   def edit
+    render 'frontend/edit'
   end
 
   def info
+    
   end
 
   def chat
