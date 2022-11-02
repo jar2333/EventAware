@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'user/new', to: 'users#new'
   get 'user/edit', to: 'users#edit'
 
-  get 'user/:uni/home', to: 'users#home'
+  get 'user/:uni/home', to: 'users#home', as: 'home'
 
   get 'user/:uni/profile', to: 'users#profile'
   get 'user/:uni/profile/following', to: 'users#following'
