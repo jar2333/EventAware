@@ -21,3 +21,6 @@ end
 Given /I (press|click) the profile (button|tab)/ do
 
 end
+
+Then /I (press|click) the (un)?follow button/ do |n|
+end

@@ -62,6 +62,10 @@ Given /there (is|exists) an( upcoming)? event with (.*)$/ do |upcoming, fields|
 
 end
 
+Given /there (is not|does not exist) an( upcoming)? event with (.*)$/ do |upcoming, fields|
+
+end
+
 And /the event with title "(.*)" has (occurred|passed|happened)/ do |title| 
 
 end
