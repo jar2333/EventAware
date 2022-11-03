@@ -12,14 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2022_11_01_210752) do
 
-  create_table "authentications", force: :cascade do |t|
-    t.string "user_id"
+  create_table "authentications", primary_key: "user_id", id: :string, force: :cascade do |t|
     t.string "auth_hash"
     t.string "auth_token"
   end
 
-  create_table "events", id: false, force: :cascade do |t|
-    t.string "event_id"
+  create_table "events", primary_key: "event_id", id: :string, force: :cascade do |t|
     t.string "organizer"
     t.string "title"
     t.string "description"
@@ -33,8 +31,7 @@ ActiveRecord::Schema.define(version: 2022_11_01_210752) do
     t.string "follower_id"
   end
 
-  create_table "messages", id: false, force: :cascade do |t|
-    t.string "message_id"
+  create_table "messages", primary_key: "message_id", id: :string, force: :cascade do |t|
     t.string "user_id"
     t.string "event_id"
     t.datetime "date_posted"
@@ -46,8 +43,9 @@ ActiveRecord::Schema.define(version: 2022_11_01_210752) do
     t.string "event_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.text "uni"
+  create_table "users", primary_key: "user_id", id: :string, force: :cascade do |t|
+    t.string "name"
+    t.string "uni"
   end
 
 end
