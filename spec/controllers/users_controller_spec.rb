@@ -3,31 +3,36 @@ require 'rails_helper'
 RSpec.describe UsersController, type: :controller do
 
   describe "GET #home" do
-    it "returns http success" do
-      get :home
-      expect(response).to have_http_status(:success)
+    it "sets variables" do
+      get :home, :uni => "jar2333"
+      expect(assign(:user)).to eql("jar2333")
+    end
+
+    it "search events" do
+      get :home, :uni => "jar2333", :search => "Ha"
+      expect(assign(:user)).to render_template("events_path")
     end
   end
 
   describe "GET #profile" do
-    it "returns http success" do
-      get :profile
-      expect(response).to have_http_status(:success)
+    it "gives profile page" do
+      get :profile, :uni => "jar2333"
+      expect(response).to render_template("profile")
     end
   end
 
   describe "GET #following" do
-    it "returns http success" do
-      get :following
-      expect(response).to have_http_status(:success)
+    it "should return users I follow" do
+      get :following, :uni => "jar2333"
+      expect(response).to render_template("following")
     end
   end
 
   describe "GET #followers" do
-    it "returns http success" do
-      get :followers
-      expect(response).to have_http_status(:success)
-    end
+    it "should return my follow" do
+      get :following, :uni => "jar2333"
+      expect(response).to render_template("followers")
+  end
   end
 
   describe "GET #new" do
