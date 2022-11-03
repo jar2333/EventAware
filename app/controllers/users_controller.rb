@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     @email = @user + "@columbia.edu"
 
     @myevents = Event.where(organizer: @user)
+    # @attending_events = Event.join(:registration)
     render 'frontend/profile'
   end
 
@@ -25,7 +26,6 @@ class UsersController < ApplicationController
     @user = params[:uni]
 
     @following = Follower.where(follower_id: @user).pluck(:user_id)
-
     render 'frontend/following'
   end
 
