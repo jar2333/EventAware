@@ -7,11 +7,11 @@ Rails.application.routes.draw do
 
   get 'user/:uni/home', to: 'users#home', as: 'home'
 
-  get 'user/:uni/profile', to: 'users#profile'
+  get 'user/:uni/profile', to: 'users#profile', as: 'profile'
   get 'user/:uni/profile/following', to: 'users#following'
   get 'user/:uni/profile/followers', to: 'users#followers'
 
-  get 'user/:uni/event/new', to: 'events#new'
+  get 'user/:uni/event/new', to: 'events#new', as: 'new_event'
 
   get 'user/:uni/event/:id/info', to: 'events#info', as: 'event'
   get 'user/:uni/event/:id/edit', to: 'events#edit'
