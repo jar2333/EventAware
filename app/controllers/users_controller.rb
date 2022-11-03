@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 
     @myevents = Event.where(organizer: @user)
     # @attending_events = Event.join(:registration)
+    @attending_events = []
     render 'frontend/profile'
   end
 

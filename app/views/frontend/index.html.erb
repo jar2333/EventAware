@@ -9,13 +9,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="./index.html">My Events</a>
+        <a class="nav-link" href="<%= home_path(@user) %>">My Events</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="./profile.html">Profile</a>
+        <a class="nav-link" href="<%= profile_path(@user) %>">Profile</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="./create.html">Create New Event</a>
+        <a class="nav-link" href="<%= new_event_path(@user) %>">Create New Event</a>
       </li>
     </ul>
     <form action="<% home_path(@user) %>" class="form-inline my-2 my-lg-0" method="GET">
