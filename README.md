@@ -1,24 +1,27 @@
 # README
+Team members:
+* Surya Akella (sa4084)
+* Tarang Rakesh Jain (trj2122)
+* Jose Ramos (jar2333)
+* Aarushi Jain (aj3087)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Instructions to install dependencies:
 
-Things you may want to cover:
+* ```bundle install```
 
-* Ruby version
 
-* System dependencies
+Instructions to run test suite:
+* ```bundle exec cucumber``` to run cucumber tests (user stories)
+* ```bundle exec rspec``` to run rspec tests
 
-* Configuration
+Services (job queues, cache servers, search engines, etc.)
 
-* Database creation
+* Search engine (filter events)
+* Create events
+* Edit events
+* Visit user profile
+* Follow/un-follow
+* Chat (post message for event)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Deployment instructions
+* Heroku Link:
