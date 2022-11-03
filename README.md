@@ -24,4 +24,4 @@ Services (job queues, cache servers, search engines, etc.)
 * Chat (post message for event)
 
 Deployment instructions
-* Heroku Link:
+* Heroku Link: https://blooming-retreat-28992.herokuapp.com/
