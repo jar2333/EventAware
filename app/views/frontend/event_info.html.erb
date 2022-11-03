@@ -36,6 +36,8 @@
 <p><%= @event_info .end_date%></p>
 <h2 for="exampleInputEmail1">Date Posted</h2>
 <p><%= @event_info .date_posted%></p>
+<h2 for="exampleInputEmail1">Organizer</h2>
+<p><%= link_to @event_info.organizer, profile_path(@event_info.organizer)%></p>
 
 
 <%= button_to "Chat", { action: "chat" }, method: :get, class: "btn btn-primary btn-block mb-4", id: "chat_button" %>

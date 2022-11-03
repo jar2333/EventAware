@@ -4,7 +4,7 @@
 
 #merge to one step later (page interaction steps)
 Given /I (am|should be) on an event page/ do
-
+    steps %Q{ Then I should see "Event Description" }
 end
 
 And /I (press|click) the event creator name/ do 
@@ -16,7 +16,7 @@ And /I (press|click) the event creator image/ do
 end
 
 And /I (press|click) the event chat (button|link)/ do 
-
+    steps %Q{ And I press "Chat" }
 end
 
 And /I (press|click) the (attend|register) button/ do
@@ -28,11 +28,11 @@ end
 
 #merge to one step later (page information steps)
 Given /the event (creator|organizer) (is|should be) "(.*)"/ do |uni|
-
+    #use regex
 end
 
 Given /the event title (is|should be) "(.*)"/ do |title|
-
+    #use regex
 end
 
 Then /I am( not)? registered/ do |n|
@@ -55,7 +55,7 @@ end
 #
 
 Given /there (are|exist) created events/ do
-
+    expect(Event.all.empty?).to eq false
 end
 
 Given /there (is|exists) an( upcoming)? event with (.*)$/ do |upcoming, fields|

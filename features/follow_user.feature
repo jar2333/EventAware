@@ -1,14 +1,16 @@
+@wip
 Feature: Follow favorite users to see their events separately
 
     I am a user who prefers particular events
     Other users tend to post events involving similar topics or friend groups
     So I will follow those users to track those events
 
+@wip
 Background: I am a user of EventAware who does not follow a profile
 
     Given I am logged in as "jar2333"
     
-
+@wip
 Scenario: I follow the profile
 
     Given I should be in the profile for user "sa4084"
