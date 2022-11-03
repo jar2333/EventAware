@@ -25,3 +25,5 @@ Services (job queues, cache servers, search engines, etc.)
 
 Deployment instructions
 * Heroku Link: https://blooming-retreat-28992.herokuapp.com/
+
+If heroku does not work, we still have the frontend and all cucumber features working. Please check our view files in browser locally and navigate to check the deployed features.
