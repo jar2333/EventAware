@@ -9,13 +9,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="./index.html">My Events</a>
+        <a class="nav-link" href="./index">My Events</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="./<%=id%>/profile.html">Profile</a>
+        <a class="nav-link" href="./profile">Profile</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="./create.html">Create New Event</a>
+        <a class="nav-link" href="./create">Create New Event</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -25,8 +25,19 @@
   </div>
 </nav>
 
-<div class="list-group">
-    <% @chat.each do |item| %>
-    <li class="list-group-item"><%= item %></li>
-    <% end %>
+<div class="card-info" style="width:50%; height:50%">
+<h2 for="exampleInputEmail1">Event Name</h2>
+<p><%= @event_info .title %></p>
+<h2 for="exampleInputEmail1">Event Description</h2>
+<p><%= @event_info .description%></p>
+<h2 for="exampleInputEmail1">Event Start Date</h2>
+<p><%= @event_info .start_date%></p>
+<h2 for="exampleInputEmail1">Event End Date</h2>
+<p><%= @event_info .end_date%></p>
+<h2 for="exampleInputEmail1">Date Posted</h2>
+<p><%= @event_info .date_posted%></p>
+
+
+<%= button_to "Chat", { action: "chat" }, method: :get, class: "btn btn-primary btn-block mb-4", id: "chat_button" %>
+
 </div>
