@@ -58,11 +58,11 @@ Given /there (are|exist) created events/ do
     expect(Event.all.empty?).to eq false
 end
 
-Given /there (is|exists) an( upcoming)? event with (.*)$/ do |upcoming, fields|
+Given /there (is|exists) an( upcoming)? event with (.*)$/ do |is, upcoming, fields|
 
 end
 
-Given /there (is not|does not exist) an( upcoming)? event with (.*)$/ do |upcoming, fields|
+Given /there (is not|does not exist) an( upcoming)? event with (.*)$/ do |is, upcoming, fields|
 
 end
 
