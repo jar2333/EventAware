@@ -1,3 +1,4 @@
+@wip
 Feature: View the profile of an existing user
 
     As a person seeking to find events to attend

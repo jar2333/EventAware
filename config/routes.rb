@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   get 'user/:uni/event/:id/info', to: 'events#info', as: 'event'
   get 'user/:uni/event/:id/edit', to: 'events#edit'
-  get 'user/:uni/event/:id/chat', to: 'events#chat'
+  get 'user/:uni/event/:id/chat', to: 'events#chat', as: 'chat'
 
   #RESOURCES
   post 'auth', to: 'authentications#create'

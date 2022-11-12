@@ -1,3 +1,4 @@
+@wip
 Feature: View the details of an event
     As a person seeking to find events to attend
     I want to see a summary of event information

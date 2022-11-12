@@ -1,3 +1,4 @@
+@wip
 Feature: View the home page of the authenticated user
 
     As a person using EventAware
