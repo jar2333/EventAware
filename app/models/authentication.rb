@@ -18,4 +18,8 @@ class Authentication < ActiveRecord::Base
         end
     end
 
+    def self.get_user(auth_token)
+        return where(auth_token: auth_token).first
+    end
+
 end

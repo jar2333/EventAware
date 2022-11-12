@@ -36,7 +36,7 @@ Then /I (am|should be) in the login page/ do |option|
 end
 
 Given /I submit credentials "(.*)" for user "(.*)"/ do |credentials, user|
-    steps %Q{ Given I fill in "Email address" with "#{user}" 
+    steps %Q{ Given I fill in "Username" with "#{user}" 
               And I fill in "Password" with "#{credentials}" 
               But I press "Sign in"
             }

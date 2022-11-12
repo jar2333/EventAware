@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   #PAGES
+  get '/', to: 'authentications#entry'
+
   get 'auth/new', to: 'authentications#new', as: 'login'
 
   get 'user/new', to: 'users#new'

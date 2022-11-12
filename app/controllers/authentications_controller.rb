@@ -1,4 +1,15 @@
 class AuthenticationsController < ApplicationController
+
+  def entry
+    if session[:auth_token].nil?
+      redirect_to :action => "new"
+    else
+      token = session[:auth_token]
+      uni = Authentication.get_user(token)
+      redirect_to home_path(uni)
+    end
+  end
+
   def create
     uni = params[:uni]
     password = params[:password]
