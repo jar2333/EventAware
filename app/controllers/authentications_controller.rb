@@ -28,7 +28,7 @@ class AuthenticationsController < ApplicationController
   end
 
   def destroy
-    session[:auth_token] = nil
+    session.clear
     redirect_to :action => "new"
   end
 end
