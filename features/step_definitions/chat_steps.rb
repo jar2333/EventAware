@@ -15,5 +15,5 @@ And /I (click|press) the send button/ do
 end
 
 Then /I should see a message by user "(.*)" that says "(.*)"/ do |user, message|
-    page.body =~ /#{message}(\s)*<br>(\s)*<div(.*)>(\s)*#{user}/
+    page.body ~= /#{message}(\s)*<br>(\s)*<div(.*)>(\s)*#{user}/
 end

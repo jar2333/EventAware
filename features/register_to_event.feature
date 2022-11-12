@@ -5,11 +5,13 @@ Feature: Register to events, so that they show up in your profile
     That wants to let friends know I am attending an event
     So I will register for an event
 
+@wip
 Background: I am a user of EventAware
 
     Given I am logged in as "jar2333"
     And I am on an event page
 
+@wip
 Scenario: I register for an event, and it shows up on my profile
 
     Given the event title is "Halloween Party"
@@ -19,6 +21,7 @@ Scenario: I register for an event, and it shows up on my profile
     And I click the profile tab
     Then I should see an event with title "Halloween Party"
 
+@wip
 Scenario: I unregister for an event, and it does not show up on my profile
 
     Given the event title is "Halloween Party"

@@ -1,5 +1,5 @@
 And /I( do not)? follow "(.*)"/ do |n, uni|
-    #Follower.find()
+    
 end
 
 And /"(.*)" does( not)? follow me/ do |n, uni|

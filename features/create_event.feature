@@ -4,10 +4,12 @@ Feature: Create events for others to join
     I am a user seeking to organize an event
     So I will create an event on EventAware
 
+@wip
 Background: I am a user on EventAware
 
     Given I am logged in as "jar2333"
 
+@wip
 Scenario: I create an event from the home page
 
     Given I am in my home page

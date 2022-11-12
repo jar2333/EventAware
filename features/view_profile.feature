@@ -7,6 +7,8 @@ Feature: View the profile of an existing user
 Background: Both me and a friend are users on the platform
 
     Given I am logged in as "jar2333"
+    And I follow "sa4084"
+    And "sa4084" does follow me
 
 Scenario: Go to my profile from the home page
 
@@ -21,7 +23,6 @@ Scenario: Go to profile of event organizer
     When I press the event creator name
     Then I should be in the profile for user "sa4084"
 
-@wip
 Scenario: Go to profile of someone I follow
 
     And I am in my profile
@@ -30,7 +31,6 @@ Scenario: Go to profile of someone I follow
     And I press the name of the user "sa4084" who I follow
     Then I should be in the profile for user "sa4084"
 
-@wip
 Scenario: Go to profile of someone who follows me
 
     And I am in my profile

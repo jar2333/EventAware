@@ -1,5 +1,5 @@
-Given /I am( not)? logged in as "(.*)"/ do |logged, uni|
-    true
+Given /I am( not)? (logged in|authenticated) as "(.*)"/ do |logged, uni|
+    
 end
 
 Then /I am( not)? in the (login|authentication) page/ do |n|
