@@ -54,10 +54,16 @@ group :development, :test do
   gem 'pry'
   gem 'pry-byebug'
 
-  gem 'capybara', '2.4.4'
+  gem 'capybara', '~> 2.8'
   gem 'launchy'
   gem 'rspec-rails', '3.7.2'
   gem 'ZenTest', '4.11.2'
+
+  # Adds support for Capybara system testing and selenium driver
+  gem 'selenium-webdriver'
+  # Easy installation and use of chromedriver to run system tests with Chrome
+  gem 'chromedriver-helper'
+
 end
 
 group :development do
@@ -70,11 +76,10 @@ group :development do
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '2.4.4'
-  gem 'selenium-webdriver'
-  # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  # # Adds support for Capybara system testing and selenium driver
+  # gem 'selenium-webdriver'
+  # # Easy installation and use of chromedriver to run system tests with Chrome
+  # gem 'chromedriver-helper'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

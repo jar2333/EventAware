@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   #PAGES
-  get 'auth/new', to: 'authentications#new'
+  get 'auth/new', to: 'authentications#new', as: 'login'
 
   get 'user/new', to: 'users#new'
   get 'user/edit', to: 'users#edit'
@@ -18,8 +18,8 @@ Rails.application.routes.draw do
   get 'user/:uni/event/:id/chat', to: 'events#chat', as: 'chat'
 
   #RESOURCES
-  post 'auth', to: 'authentications#create'
-  delete 'auth', to: 'authentications#destroy'
+  post 'auth', to: 'authentications#create', as: 'create_auth'
+  delete 'auth', to: 'authentications#destroy', as: 'delete_auth'
 
   post 'user', to: 'users#create'
   put 'user/:uni', to: 'users#update'
