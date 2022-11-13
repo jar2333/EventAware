@@ -5,8 +5,6 @@ ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.8', '>= 5.2.8.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '1.3.11'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -58,6 +56,9 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails', '3.7.2'
   gem 'ZenTest', '4.11.2'
+
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '~> 1.3.6'
 end
 
 group :development do
@@ -82,8 +83,6 @@ gem 'tzinfo'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
-  #gem 'pg', '~> 0.2'
+  gem 'pg', '~> 0.21' # for Heroku deployment
   gem 'rails_12factor'
 end
-
-
