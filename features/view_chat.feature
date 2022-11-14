@@ -1,3 +1,4 @@
+@wip
 Feature: View a group chat specific to an event
 
     I am a user who wants to join an event

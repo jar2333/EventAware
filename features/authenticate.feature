@@ -1,4 +1,3 @@
-@wip
 Feature: Authenticate user to access features of EventAware
 
     As a user of the platform
@@ -7,19 +6,24 @@ Feature: Authenticate user to access features of EventAware
 
 Background: The user is not authenticated
 
-    Given I am not logged in as "jar2333"
+    Given there is a user "jar2333" with password "password"
+    And I am not logged in as "jar2333"
     Then I am in the login page
 
 Scenario: Authentication successful
 
-    Given I submit valid credentials for user "jar2333"
-    Then I am logged in as "jar2333"
-    And I am in the home page
+    Given I submit credentials "password" for user "jar2333"
+    Then I should be in my home page
+    And I am logged in as "jar2333"
 
 Scenario: Authentication failure
 
-    Given I submit invalid credentials for user "jar2333"
-    Then I am not logged in as "jar2333"
-    And I am in the login page
+    Given I submit credentials "wrongpassword" for user "jar2333"
+    Then I should be in the login page
+    And I am not logged in as "jar2333"
 
 
+
+
+
+    
