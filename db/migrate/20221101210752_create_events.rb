@@ -1,8 +1,7 @@
 class CreateEvents < ActiveRecord::Migration[5.2]
   def change
-    create_table :events, id: false do |t|
-      t.string :event_id, primary_key: true
-      t.string :organizer
+    create_table :events do |t|
+      t.references :user
       t.string :title
       t.string :description
       t.datetime :date_posted

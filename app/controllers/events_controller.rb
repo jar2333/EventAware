@@ -47,15 +47,12 @@ class EventsController < ApplicationController
 
     date_posted = Time.now.utc.to_s
 
-    event_id = @user + date_posted
-
-    Event.create!({ :event_id => event_id,
-                  :title => title,
-                  :description => description,
-                  :organizer => @user,
-                  :date_posted => date_posted,
-                  :start_date => start_date.to_s + " " + start_time.to_s + " UTC",
-                  :end_date => end_date.to_s + " " + end_time.to_s + " UTC"})
+    Event.create!({:title => title,
+                   :description => description,
+                   :user_id => User.find_by_uni(@user).id,
+                   :date_posted => date_posted,
+                   :start_date => start_date.to_s + " " + start_time.to_s + " UTC",
+                   :end_date => end_date.to_s + " " + end_time.to_s + " UTC"})
 
     redirect_to :action => "info", :id => event_id, :uni => @user
   end
