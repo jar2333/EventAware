@@ -1,15 +1,15 @@
 And /I( do not)? follow "(.*)"/ do |n, uni|
-    #Follower.find()
-end
-
-And /"(.*)" does( not)? follow me/ do |n, uni|
     
 end
 
-And /I press the (name|image) of the user "(.*)" who I follow$/ do |uni, |
+And /"(.*)" does( not)? follow me/ do |uni, n|
+    
+end
+
+And /I press the (name|image) of the user "(.*)" who I follow$/ do |option, uni|
 
 end
 
-And /I press the (name|image) of the user "(.*)" who follows me$/ do |uni|
+And /I press the (name|image) of the user "(.*)" who follows me$/ do |option, uni|
     
 end

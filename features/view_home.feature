@@ -1,8 +1,9 @@
+@wip
 Feature: View the home page of the authenticated user
 
     As a person using EventAware
     I want to discover happening close to me in time and place
-    So I access my home page
+    So I access the home page
 
 Background: I am a user of EventAware
 

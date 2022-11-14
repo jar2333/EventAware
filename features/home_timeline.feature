@@ -1,3 +1,4 @@
+@wip
 Feature: View timeline of events in home page
 
     As a user seeking to participate in events
@@ -33,5 +34,4 @@ Scenario: Search for upcoming events by title substring
     Then I should see an event with title "Halloween Party"
     And I should not see "Birthday Party"
 
-@wip
 Scenario: The events are ordered chronologically

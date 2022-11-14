@@ -27,31 +27,38 @@
   </div>
 </nav>
 
-<form action="<%= "/user/#{@user}/event" %>", method="post">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Event Title</label>
-        <input type="text" name="title" class="form-control" id="email" aria-describedby="emailHelp" placeholder="title">
-      </div>
-        <div class="form-group">
-        <label for="exampleInputEmail1">Event Start date</label>
-        <input type="date" name="start_date" class="form-control" id="date" aria-describedby="emailHelp" placeholder="date">
-      </div>
+<%= form_with url: "/user/#{@user}/event", method: :post do |form| %>
       <div class="form-group">
-        <label for="exampleInputPassword1">Start Time</label>
-        <input type="time" name="start_time" class="form-control" id="regstarttime" placeholder="time">
+        <%= form.label :title, "Event Title", class: "form-label" %>
+        <%= form.text_field :title, class: "form-control", placeholder: "title" %>
       </div>
+
       <div class="form-group">
-      <label for="exampleInputEmail1">Event End date</label>
-      <input type="date" name="end_date" class="form-control" id="date" aria-describedby="emailHelp" placeholder="date">
+        <%= form.label :start_date, "Event Start date", class: "form-label" %>
+        <%= form.date_field :start_date, class: "form-control", placeholder: "date" %>
       </div>
+
       <div class="form-group">
-        <label for="exampleInputPassword1">End Time</label>
-        <input type="time" name="end_time" class="form-control" id="regendtime" placeholder="time">
+        <%= form.label :start_time, "Start Time", class: "form-label" %>
+        <%= form.time_field :start_time, class: "form-control", placeholder: "time" %>
       </div>
+
       <div class="form-group">
-        <label for="exampleInputPassword1">Description</label>
-        <input type="text" name="description" class="form-control" id="location" placeholder="description">
+        <%= form.label :end_date, "Event End date", class: "form-label" %>
+        <%= form.date_field :end_date, class: "form-control", placeholder: "date" %>
       </div>
-      <input type="submit" class="btn btn-primary" value="Create New Event">
-</form>
+
+      <div class="form-group">
+        <%= form.label :end_time, "End Time", class: "form-label" %>
+        <%= form.time_field :end_time, class: "form-control", placeholder: "time" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :description, "Description", class: "form-label" %>
+        <%= form.text_field :description, class: "form-control", placeholder: "description" %>
+      </div>
+
+      <%= form.submit "Create New Event", class: "btn btn-primary" %>
+
+<% end %>
 

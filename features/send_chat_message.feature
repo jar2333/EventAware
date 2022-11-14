@@ -1,3 +1,4 @@
+@wip
 Feature: Send messages in an event chat
 
     I am a user of EventAware
