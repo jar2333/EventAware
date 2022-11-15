@@ -69,13 +69,13 @@ Given /there (should|does)( not)? exist an( upcoming)? event with (.*)$/ do |sho
         [a[0..i-1].strip, a[i..-1].strip[1..-2]]
     }]
 
+    if attributes.key?('organizer')
+        attributes[:uni] = attributes['organizer']
+    end
+
     if should == 'should'
         expect(Event.where(attributes).empty?).to be !n.nil?
     elsif should == 'does' && !n
-        if attributes.key?('organizer')
-            attributes[:uni] = attributes['organizer']
-        end
-
         event = Event.create_from_form(attributes)
         visit event_path("jar2333", event.id)
     end
