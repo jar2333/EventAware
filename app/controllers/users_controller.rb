@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       search = params[:search]
       @events = Event.where('title LIKE ?', "%#{search}%").all
     end
-    render 'frontend/index'
+    render 'frontend/home'
   end
 
   def profile
