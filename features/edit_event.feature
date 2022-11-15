@@ -7,8 +7,8 @@ Feature: Edit the details of an event the user has created
 
 Background: I am a user and have created some events
 
-    Given I am logged in as "jar2333"
-    And I am on an event page
+    Given I log in as jar2333
+    And I am in my home page
     
 Scenario: I edit the title of an event I created
 

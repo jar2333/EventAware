@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-11-15T16:13:03+00:00">2022-11-15T16:13:03+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-11-15T16:17:27+00:00">2022-11-15T16:17:27+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="red">
-  69.19%
+  68.93%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.96
+         0.95
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>409</b> relevant lines,
-    <span class="green"><b>283</b> lines covered</span> and
-    <span class="red"><b>126</b> lines missed. </span>
+    <b>412</b> relevant lines,
+    <span class="green"><b>284</b> lines covered</span> and
+    <span class="red"><b>128</b> lines missed. </span>
     (<span class="red">
-  69.19%
+  68.93%
 </span>
 )
   </div>
@@ -413,12 +413,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#11257d3afeb8d95b41913adc722b2c138093c6b3" class="src_link" title="features/step_definitions/event_steps.rb">features/step_definitions/event_steps.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">90.00 %</td>
-            <td class="cell--number">71</td>
-            <td class="cell--number">20</td>
-            <td class="cell--number">18</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">1.10</td>
+            <td class="yellow strong cell--number t-file__coverage">82.61 %</td>
+            <td class="cell--number">75</td>
+            <td class="cell--number">23</td>
+            <td class="cell--number">19</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">1.04</td>
             
           </tr>
         
@@ -7433,7 +7433,7 @@
     <h3>features/step_definitions/event_steps.rb</h3>
     <h4>
       <span class="yellow">
-  90.0%
+  82.61%
 </span>
 
       lines covered
@@ -7442,9 +7442,9 @@
     
 
     <div class="t-line-summary">
-      <b>20</b> relevant lines.
-      <span class="green"><b>18</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>23</b> relevant lines.
+      <span class="green"><b>19</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
 
     
@@ -8077,7 +8077,7 @@
 
             
 
-            <code class="ruby">Given /there does( not)? exist an( upcoming)? event with (.*)$/ do |n, upcoming, fields|</code>
+            <code class="ruby">Given /there (should|does)( not)? exist an( upcoming)? event with (.*)$/ do |should, n, upcoming, fields|</code>
           </li>
         </div>
       
@@ -8154,51 +8154,51 @@
 
             
 
-            <code class="ruby">    expect(Event.where(attributes).empty?).to be !n.nil?</code>
+            <code class="ruby">    if should == &#39;should&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="65">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="65">
+            <span class="hits">2</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">        expect(Event.where(attributes).empty?).to be !n.nil?</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="66">
+          <li class="missed" data-hits="0" data-linenumber="66">
             
             
 
             
 
-            <code class="ruby">end</code>
+            <code class="ruby">    elsif should == &#39;does&#39; &amp;&amp; !n</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="67">
+          <li class="missed" data-hits="0" data-linenumber="67">
             
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">        Event.create!(attributes)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="68">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="68">
+            
             
 
             
 
-            <code class="ruby">And /the event with title &quot;(.*)&quot; has ocurred/ do |title| </code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -8226,6 +8226,50 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="71">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="72">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">And /the event with title &quot;(.*)&quot; has ocurred/ do |title| </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="73">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="74">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="75">
             
             
 

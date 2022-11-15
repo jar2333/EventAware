@@ -54,14 +54,18 @@ Given /there exist created events/ do
     expect(Event.all.empty?).to be_falsey
 end
 
-Given /there does( not)? exist an( upcoming)? event with (.*)$/ do |n, upcoming, fields|
+Given /there (should|does)( not)? exist an( upcoming)? event with (.*)$/ do |should, n, upcoming, fields|
 
     attributes = Hash[fields.split(',').map { |a| 
         i = a.index /\"(.*)\"/
         [a[0..i-1].strip, a[i..-1].strip[1..-2]]
     }]
 
-    expect(Event.where(attributes).empty?).to be !n.nil?
+    if should == 'should'
+        expect(Event.where(attributes).empty?).to be !n.nil?
+    elsif should == 'does' && !n
+        Event.create!(attributes)
+    end
 
 end
 

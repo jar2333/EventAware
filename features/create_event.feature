@@ -11,7 +11,7 @@ Background: I am a user on EventAware
 Scenario: I create an event from the home page
 
     
-    And there does not exist an event with title "Movie Screening"
+    And there should not exist an event with title "Movie Screening"
     And I click the create event button
     Then I should be on the create event page
     And I enter "Movie Screening" in the title field
@@ -24,7 +24,7 @@ Scenario: I create an event from the home page
     Then I should be at an event info page
     And the event creator should be "jar2333"
     And the event title should be "Movie Screening"
-    And there does exist an event with title "Movie Screening"
+    And there should exist an event with title "Movie Screening"
 
 
 
