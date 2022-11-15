@@ -5,7 +5,7 @@ class AuthenticationsController < ApplicationController
       redirect_to :action => "new"
     else
       token = session[:auth_token]
-      uni = Authentication.get_user(token)
+      uni = Authentication.find_by(auth_token: auth_token).user.uni
       redirect_to home_path(uni)
     end
   end
@@ -16,11 +16,9 @@ class AuthenticationsController < ApplicationController
 
     auth_token = Authentication.verify(uni, password)
     if auth_token
-      puts "VERIFIED"
       session[:auth_token] = auth_token
       redirect_to home_path(uni)
     else
-      puts "REJECTED"
       redirect_to :action => "new"
     end
   end

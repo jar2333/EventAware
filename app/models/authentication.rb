@@ -22,16 +22,6 @@ class Authentication < ActiveRecord::Base
         else
             return nil
         end
-
-        # if where(user_id: username, auth_hash: auth_hash).exists?
-        #     return find(username).auth_token
-        # else
-        #     return nil
-        # end
-    end
-
-    def self.get_user(auth_token)
-        return where(auth_token: auth_token).first
     end
 
 end
