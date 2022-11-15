@@ -1,10 +1,3 @@
-Given /I (am|should be) on a create event page/ do |check|
-
-end
-
 Given /I click the create event button/ do 
+    steps %Q{ Then I follow "Create New Event"}
 end
-
-Then /I enter "(.*)" in the (.*) field/ do |text, field|
-end
-

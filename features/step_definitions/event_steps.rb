@@ -3,8 +3,8 @@
 #
 
 #merge to one step later (page interaction steps)
-Given /I (am|should be) on an event page/ do |check|
-    steps %Q{ Then I should see "Event Description" }
+Given /I (am|should be) at an event info page/ do |check|
+    current_path =~ /user\/(.*)\/event\/[\d]+\/info/
 end
 
 And /I click the event creator (name|image)/ do |option| 
@@ -55,6 +55,13 @@ Given /there exist created events/ do
 end
 
 Given /there does( not)? exist an( upcoming)? event with (.*)$/ do |n, upcoming, fields|
+
+    attributes = Hash[fields.split(',').map { |a| 
+        i = a.index /\"(.*)\"/
+        [a[0..i-1].strip, a[i..-1].strip[1..-2]]
+    }]
+
+    expect(Event.where(attributes).empty?).to be !n.nil?
 
 end
 

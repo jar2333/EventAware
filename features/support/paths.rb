@@ -5,6 +5,14 @@ module NavigationHelpers
   #
   # step definition in web_steps.rb
   #
+
+  def get_logged_in_user
+    session = Capybara.current_session.driver.request.session
+    session_token = session[:auth_token]
+
+    return Authentication.find_by(auth_token: session_token).user
+  end
+
   def path_to(page_name)
     case page_name
 
@@ -12,7 +20,10 @@ module NavigationHelpers
       '/'
 
     when /^the home\s?page$/
-      home_path("jar2333")
+      home_path("jar2333") #CHANGE LATER
+
+    when /the create event page/
+      new_event_path("jar2333")
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
