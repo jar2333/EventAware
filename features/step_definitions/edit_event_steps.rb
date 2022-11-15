@@ -1,5 +1,5 @@
-Given /I (am|should be) on an edit event page/ do |check|
-
+Given /I (am|should be) at an edit event page/ do |check|
+    current_path =~ /user\/(.*)\/event\/[\d]+\/edit/
 end
 
 Then /I enter "(.*)" in the (.*) field/ do |text, field|

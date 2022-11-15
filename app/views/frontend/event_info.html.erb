@@ -42,4 +42,10 @@
 
 <%= button_to "Chat", { action: "chat" }, method: :get, class: "btn btn-primary btn-block mb-4", id: "chat_button" %>
 
+<%= 
+if @authenticated
+  button_to "Edit", { action: "edit" }, method: :get, class: "btn btn-primary btn-block mb-4", id: "edit_button" 
+end
+%>
+
 </div>
