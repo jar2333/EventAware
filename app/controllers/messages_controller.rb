@@ -8,10 +8,9 @@ class MessagesController < ApplicationController
     user        = params[:uni]
     date_posted = Time.now.utc.to_s
 
-    Message.create!({:message_id => event_id + user + date_posted,
-                     :content => content,
+    Message.create!({:content => content,
                      :event_id => event_id,
-                     :user_id => user,
+                     :user_id => User.find_by(uni: user),
                      :date_posted => date_posted})
 
     redirect_back fallback_location: "/user/#{user}/event/#{event_id}/chat"

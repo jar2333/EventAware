@@ -1,11 +1,14 @@
 Given /there is a user "(.*)" with password "(.*)"$/ do |username, password|
+    User.create!(name: "Jose", uni: username)
     Authentication.make(username, password)
 end
 
 Given /I am( not)? logged in as "(.*)"/ do |not_logged, uni|
+    #record exists
+    expect(User.find_by(uni: uni).authentication).to be_truthy
+
     #get user token
-    expect(Authentication.find(uni)).to be_truthy
-    user_token = Authentication.find(uni).auth_token
+    user_token = User.find_by(uni: uni).authentication.auth_token
 
     #visit login page
     steps %Q{ Then I go to the login page }
