@@ -8,34 +8,34 @@ class UsersController < ApplicationController
       search = params[:search]
       @events = Event.where('title LIKE ?', "%#{search}%").all
     end
-    render 'frontend/index'
+    render 'frontend/home'
   end
 
   def profile
     @user = params[:uni]
 
-    @name = User.find(@user).name
+    @name = User.find_by(uni: @user).name
     @email = @user + "@columbia.edu"
 
-    @myevents = Event.where(organizer: @user)
+    @myevents = User.find_by(uni: @user).events
     # @attending_events = Event.join(:registration)
     @attending_events = []
     render 'frontend/profile'
   end
 
-  def following
-    @user = params[:uni]
+  # def following
+  #   @user = params[:uni]
 
-    @following = Follower.where(follower_id: @user).pluck(:user_id)
-    render 'frontend/following'
-  end
+  #   @following = Follower.where(follower_id: @user).pluck(:user_id)
+  #   render 'frontend/following'
+  # end
 
-  def followers
-    @user = params[:uni]
+  # def followers
+  #   @user = params[:uni]
 
-    @followers = Follower.where(user_id: @user).pluck(:follower_id)
-    render 'frontend/follower'
-  end
+  #   @followers = Follower.where(user_id: @user).pluck(:follower_id)
+  #   render 'frontend/follower'
+  # end
 
   def new
   end

@@ -12,38 +12,40 @@
 
 ActiveRecord::Schema.define(version: 2022_11_01_210752) do
 
-  create_table "authentications", primary_key: "user_id", id: :string, force: :cascade do |t|
+  create_table "authentications", force: :cascade do |t|
+    t.integer "user_id"
     t.string "auth_hash"
     t.string "auth_token"
+    t.index ["user_id"], name: "index_authentications_on_user_id"
   end
 
-  create_table "events", primary_key: "event_id", id: :string, force: :cascade do |t|
-    t.string "organizer"
+  create_table "events", force: :cascade do |t|
+    t.integer "user_id"
     t.string "title"
     t.string "description"
     t.datetime "date_posted"
     t.datetime "start_date"
     t.datetime "end_date"
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
-  create_table "followers", id: false, force: :cascade do |t|
-    t.string "user_id"
-    t.string "follower_id"
-  end
-
-  create_table "messages", primary_key: "message_id", id: :string, force: :cascade do |t|
-    t.string "user_id"
-    t.string "event_id"
+  create_table "messages", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "event_id"
     t.datetime "date_posted"
     t.string "content"
+    t.index ["event_id"], name: "index_messages_on_event_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
-  create_table "registrations", id: false, force: :cascade do |t|
-    t.string "user_id"
-    t.string "event_id"
+  create_table "registrations", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "event_id"
+    t.index ["event_id"], name: "index_registrations_on_event_id"
+    t.index ["user_id"], name: "index_registrations_on_user_id"
   end
 
-  create_table "users", primary_key: "user_id", id: :string, force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "uni"
   end

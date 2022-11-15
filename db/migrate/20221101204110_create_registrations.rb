@@ -1,8 +1,8 @@
 class CreateRegistrations < ActiveRecord::Migration[5.2]
   def change
-    create_table :registrations, id: false do |t|
-      t.string :user_id
-      t.string :event_id
+    create_table :registrations do |t|
+      t.references :user_id
+      t.references :event_id
     end
   end
 end

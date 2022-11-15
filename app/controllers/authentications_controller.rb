@@ -4,8 +4,8 @@ class AuthenticationsController < ApplicationController
     if session[:auth_token].nil?
       redirect_to :action => "new"
     else
-      token = session[:auth_token]
-      uni = Authentication.get_user(token)
+      auth_token = session[:auth_token]
+      uni = Authentication.find_by(auth_token: auth_token).user.uni
       redirect_to home_path(uni)
     end
   end

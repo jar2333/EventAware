@@ -8,6 +8,9 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
+    when /the index page/
+      '/'
+
     when /^the home\s?page$/
       home_path("jar2333")
 
