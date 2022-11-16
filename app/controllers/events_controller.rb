@@ -15,7 +15,6 @@ class EventsController < ApplicationController
 
     #if logged in as this user, also render edit and delete buttons
     @authenticated = false
-
     @id = params[:id]
     @event_info = Event.find(@id)
 
