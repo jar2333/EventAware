@@ -24,6 +24,7 @@ Services (job queues, cache servers, search engines, etc.)
 * Chat (post message for event)
 
 Deployment instructions
-* Heroku Link: https://blooming-retreat-28992.herokuapp.com/
+* Heroku Link: https://secret-ravine-76760.herokuapp.com/
 
-If heroku does not work, we still have the frontend and all cucumber features working. Please check our view files in browser locally and navigate to check the deployed features.
+Github Link
+* https://github.com/jar2333/EventAware/

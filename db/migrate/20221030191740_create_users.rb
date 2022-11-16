@@ -5,6 +5,6 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :uni
     end
 
-    add_index :change, [:uni], unique: true
+    add_index :users, [:uni], unique: true
   end
 end

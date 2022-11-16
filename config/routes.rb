@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get 'user/:uni/event/:id/chat', to: 'events#chat', as: 'chat'
 
   #RESOURCES
+  resources :events
+  resources :messages
   post 'auth', to: 'authentications#create', as: 'create_auth'
   delete 'auth', to: 'authentications#destroy', as: 'delete_auth'
 

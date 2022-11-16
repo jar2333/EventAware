@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2022_11_01_210752) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "uni"
+    t.index ["uni"], name: "index_users_on_uni", unique: true
   end
 
 end
