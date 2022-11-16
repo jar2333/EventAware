@@ -1,4 +1,3 @@
-@wip
 Feature: Send messages in an event chat
 
     I am a user of EventAware
@@ -7,8 +6,10 @@ Feature: Send messages in an event chat
 
 Background: I am a user of EventAware
 
-    Given I am logged in as "jar2333"
-    And I am on a chat page
+    Given I log in as jar2333
+    And there does exist an event with organizer "jar2333", title "Halloween Party", description "hi", start date "12/31/2022", start time "11:59pm", end date "01/01/2023", end time "12:01am"
+    And I click the event chat button
+    Then I should be at a chat page
 
 Scenario: I send a simple text message to the chat
 
