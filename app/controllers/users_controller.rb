@@ -14,12 +14,16 @@ class UsersController < ApplicationController
   def profile
     @user = params[:uni]
 
-    @name = User.find_by(uni: @user).name
+    user = User.find_by(uni: @user)
+
+    @name = user.name
     @email = @user + "@columbia.edu"
 
-    @myevents = User.find_by(uni: @user).events
-    # @attending_events = Event.join(:registration)
+    @myevents = user.events
+
+    # @attending_events = user.registrations
     @attending_events = []
+
     render 'frontend/profile'
   end
 

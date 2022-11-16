@@ -1,4 +1,4 @@
-Then /I (am|should be) in a chat page/ do |check|
+Then /I (am|should be) at a chat page/ do |check|
     steps %Q{ Then I should see "Message:" }
 end
 

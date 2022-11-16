@@ -40,6 +40,14 @@
 <p><%= link_to @event_info.organizer, profile_path(@event_info.organizer)%></p>
 
 
+<%= 
+if !@registered
+  button_to "Register", { :controller => "registrations", :action => "create" }, method: :post, class: "btn btn-primary btn-block mb-4", id: "register_button" 
+else
+  button_to "Unregister", { :controller => "registrations", :action => "destroy" }, method: :delete, class: "btn btn-primary btn-block mb-4", id: "register_button"
+end 
+%>
+
 <%= button_to "Chat", { action: "chat" }, method: :get, class: "btn btn-primary btn-block mb-4", id: "chat_button" %>
 
 <%= 

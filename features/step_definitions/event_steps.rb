@@ -19,8 +19,12 @@ And /I click the event chat button/ do
     steps %Q{ And I press "Chat" }
 end
 
-And /I click the register button/ do
-    steps %Q{ And I press "Register" }
+And /I click the (un)?register button/ do |un|
+    if un
+        steps %Q{ And I press "Unregister" }
+    else
+        steps %Q{ And I press "Register" }
+    end
 end
 
 But /I click the edit button/ do
@@ -39,7 +43,11 @@ Given /the event title (is|should be) "(.*)"/ do |check, title|
 end
 
 Then /I am( not)? registered/ do |n|
-    steps %Q{ Then I should see "Registered" }
+    if n
+        page.body =~ /Register/
+    else
+        page.body =~ /Unregister/
+    end
 end
 
 #
@@ -66,11 +74,11 @@ Given /there (should|does)( not)? exist an( upcoming)? event with (.*)$/ do |sho
 
     attributes = Hash[fields.split(',').map { |a| 
         i = a.index /\"(.*)\"/
-        [a[0..i-1].strip, a[i..-1].strip[1..-2]]
+        [a[0..i-1].strip.tr(' ', '_').to_sym, a[i..-1].strip.tr('\"', '')]
     }]
 
-    if attributes.key?('organizer')
-        attributes[:uni] = attributes['organizer']
+    if attributes.key?(:organizer)
+        attributes[:uni] = attributes[:organizer]
     end
 
     if should == 'should'
@@ -83,6 +91,7 @@ Given /there (should|does)( not)? exist an( upcoming)? event with (.*)$/ do |sho
 end
 
 And /the event with title "(.*)" has ocurred/ do |title| 
-
+    event = Event.find_by(title: title)
+    expect(Date.parse(event.end_date.to_s).past?).to be true
 end
 

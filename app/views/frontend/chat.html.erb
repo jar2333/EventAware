@@ -33,7 +33,7 @@
           
           <br>
           <div style="color: gray; font-size: 12px; margin:0; padding:0">
-          <%= msg.user_id + " --- " + msg.date_posted.to_s %>
+          <%= msg.user_id.to_s + " --- " + msg.date_posted.to_s %>
           </div>
           
           
@@ -45,7 +45,9 @@
     <% end %>
 </div>
 
-<%= form_with url: "./message", method: :post do |form| %>
+<%= button_to "Back", { action: "info" }, method: :get, class: "btn btn-primary btn-block mb-4", id: "chat_button" %>
+
+<%= form_with url: "message", method: :post do |form| %>
   <%= form.label :msg, "Message:" %>
   <%= form.text_field :msg %>
   <%= form.submit "Send" %>

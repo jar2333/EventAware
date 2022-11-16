@@ -24,6 +24,8 @@ class EventsController < ApplicationController
       @authenticated = true
     end
 
+    @registered = !@event_info.registrations.where(user_id: User.find_by(uni: @user)).empty?
+
     render 'frontend/event_info'
   end
 

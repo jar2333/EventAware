@@ -1,4 +1,3 @@
-@wip
 Feature: View the home page of the authenticated user
 
     As a person using EventAware
@@ -7,11 +6,11 @@ Feature: View the home page of the authenticated user
 
 Background: I am a user of EventAware
 
-    Given I am logged in as "jar2333"
+    Given I log in as jar2333
+    And I am in the profile "jar2333"
 
 Scenario: I am viewing a profile and want to switch to the home timeline
 
-    Given I am in a profile page
-    And I click the home tab
+    Given I click the home tab
     Then I am in my home page
 
