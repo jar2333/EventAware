@@ -73,8 +73,6 @@ Given /there (should|does)( not)? exist an( upcoming)? event with (.*)$/ do |sho
         attributes[:uni] = attributes[:organizer]
     end
 
-    puts attributes
-
     if should == 'should'
         expect(Event.where(attributes).empty?).to be !n.nil?
     elsif should == 'does' && !n
