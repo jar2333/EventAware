@@ -24,4 +24,10 @@ class Authentication < ActiveRecord::Base
         end
     end
 
+    def self.logged_in?(username, session_token)
+       user_token = User.find_by(uni: username).authentication.auth_token
+
+       session_token == user_token
+    end
+
 end

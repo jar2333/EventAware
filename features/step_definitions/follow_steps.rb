@@ -1,4 +1,4 @@
-And /I( do not)? follow "(.*)"/ do |n, uni|
+And /I do( not)? follow "(.*)"/ do |n, uni|
     
 end
 

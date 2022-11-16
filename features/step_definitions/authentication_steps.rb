@@ -46,15 +46,17 @@ Given /I submit credentials "(.*)" for user "(.*)"/ do |credentials, user|
 end
 
 Given /I log in as (.*)$/ do |username|
-    steps %Q{ I go to the index page }
-
     user = User.find_by(uni: username)
     if !user
         steps %Q{ Then there is a user "#{username}" with password "password" }
     end
 
-    auth_token_value = User.find_by(uni: username).authentication.auth_token
-    page.driver.browser.set_cookie("auth_token=#{auth_token_value}")
-
-    steps %Q{ I am logged in as "#{username}" }
+    steps %Q{
+        Given there is a user "#{username}" with password "password"
+        And I am not logged in as "#{username}"
+        Then I am in the login page
+        Given I submit credentials "password" for user "#{username}"
+        Then I should be in my home page
+        And I am logged in as "#{username}"
+    }
 end
