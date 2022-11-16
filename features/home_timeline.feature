@@ -11,16 +11,16 @@ Background: I am a registered user in the home page
     And I am in my home page
     And there does exist an event with organizer "jar2333", title "Halloween Party", description "hi", start date "12/31/2022", start time "11:59pm", end date "01/01/2023", end time "12:01am"
     And there does exist an event with organizer "jar2333", title "Birthday Party", description "hello", start date "12/31/2022", start time "11:59pm", end date "01/01/2023", end time "12:01am"
+    And there does exist an event with organizer "jar2333", title "New Years Party", description "hello", start date "10/31/2022", start time "11:59pm", end date "11/01/2022", end time "12:01am"
 
 Scenario: All upcoming events show up
 
     Then I should see an event with title "Halloween Party"
     And I should see an event with title "Birthday Party"
 
-@wip
 Scenario: Events that already occurred do not show up
 
-    But the event with title "New Years Party" has passed
+    But the event with title "New Years Party" has ocurred
     Then I should see an event with title "Halloween Party"
     And I should not see "New Years Party"
 

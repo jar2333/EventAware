@@ -17,7 +17,7 @@ class Event < ActiveRecord::Base
         end_time = params[:end_time]
         start_date = params[:start_date]
         end_date = params[:end_date]
-    
+
         description = params[:description]
     
         date_posted = Time.now.utc.to_s
@@ -26,8 +26,8 @@ class Event < ActiveRecord::Base
                             :description => description,
                             :user_id => User.find_by_uni(user).id,
                             :date_posted => date_posted,
-                            :start_date => start_date.to_s + " " + start_time.to_s + " UTC",
-                            :end_date => end_date.to_s + " " + end_time.to_s + " UTC"}
+                            :start_date => (start_date + " " + start_time).to_s,
+                            :end_date => (end_date + " " + end_time).to_s}
                             )
     end
 
@@ -43,12 +43,13 @@ class Event < ActiveRecord::Base
     
         date_posted = Time.now.utc.to_s
     
-        return update({:title => title,
-                            :description => description,
-                            :user_id => User.find_by_uni(user).id,
-                            :date_posted => date_posted,
-                            :start_date => start_date.to_s + " " + start_time.to_s + " UTC",
-                            :end_date => end_date.to_s + " " + end_time.to_s + " UTC"}
-                            )
+        return update({
+            :title => title,
+            :description => description,
+            :user_id => User.find_by_uni(user).id,
+            :date_posted => date_posted,
+            :start_date => start_date.to_s + " " + start_time.to_s,
+            :end_date => end_date.to_s + " " + end_time.to_s
+            })
     end
 end
