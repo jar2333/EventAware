@@ -40,5 +40,7 @@ Rails.application.routes.draw do
   put 'user/:uni/event/:id', to: 'events#update'
   delete 'user/:uni/event/:id', to: 'events#destroy'
 
+  post 'user/:uni/event/:id/registration', to: 'registrations#create'
+  delete 'user/:uni/event/:id/registration', to: 'registrations#destroy'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

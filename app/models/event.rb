@@ -2,7 +2,7 @@ class Event < ActiveRecord::Base
     has_many :registrations
     has_many :messages
     has_many :users, through: :registrations
-    has_many :users, through: :messages
+    # has_many :users, through: :messages
 
     has_one :users
 

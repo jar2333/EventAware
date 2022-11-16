@@ -18,6 +18,7 @@ Scenario: All upcoming events show up
     Then I should see an event with title "Halloween Party"
     And I should see an event with title "Birthday Party"
 
+@wip
 Scenario: Events that already occurred do not show up
 
     But the event with title "New Years Party" has ocurred

@@ -19,8 +19,12 @@ And /I click the event chat button/ do
     steps %Q{ And I press "Chat" }
 end
 
-And /I click the register button/ do
-    steps %Q{ And I press "Register" }
+And /I click the (un)?register button/ do |un|
+    if un
+        steps %Q{ And I press "Unregister" }
+    else
+        steps %Q{ And I press "Register" }
+    end
 end
 
 But /I click the edit button/ do
@@ -39,7 +43,11 @@ Given /the event title (is|should be) "(.*)"/ do |check, title|
 end
 
 Then /I am( not)? registered/ do |n|
-    steps %Q{ Then I should see "Registered" }
+    if n
+        page.body =~ /Register/
+    else
+        page.body =~ /Unregister/
+    end
 end
 
 #
