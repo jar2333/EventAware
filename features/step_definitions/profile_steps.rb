@@ -1,14 +1,23 @@
 Then /I (should be|am) in the profile "(.*)"/ do |check, uni| 
-    steps %Q{ Then I should see "Email: #{uni}@columbia.edu" }
+    if check == 'am'
+        visit profile_path(uni)
+    else
+        steps %Q{ Then I should see "Email: #{uni}@columbia.edu" }
+    end
 end
 
 Given /I (should be|am) in (a|my) profile$/ do |my, check|
-    if my == 'my'
-        steps %Q{ Then I should see "Email: jar2333@columbia.edu" }
+
+    if my == 'am'
+        visit profile_path("jar2333")
     else
-        steps %Q{ Then I should see "Email: " 
-              And I should see "Name: "
-            }
+        if my == 'my'
+            steps %Q{ Then I should see "Email: jar2333@columbia.edu" }
+        else
+            steps %Q{ Then I should see "Email: " 
+                And I should see "Name: "
+                }
+        end
     end
 end
 
