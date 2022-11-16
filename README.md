@@ -28,5 +28,3 @@ Deployment instructions
 
 Github Link
 * https://github.com/jar2333/EventAware/
-
-If heroku does not work, we still have the frontend and all cucumber features working. Please check our view files in browser locally and navigate to check the deployed features.
