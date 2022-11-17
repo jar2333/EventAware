@@ -24,11 +24,11 @@ Services (job queues, cache servers, search engines, etc.)
 * Chat (post message for event)
 
 Testing Instructions
-Clear Database ```bin/rake db:drop```
-* ```bin/rake db:create```
-* ```bin/rake db:migrate```
-* ```bundle exec cucumber```
-* ```bundle exec rspec```
+* First we Clear the  Database ```bin/rake db:drop```
+* Then we create the database ```bin/rake db:create```
+* Then we migrate the database ```bin/rake db:migrate```
+* Run the cucumber tests using ```bundle exec cucumber```
+* Run the rspec tests using```bundle exec rspec```
 
 Deployment instructions
 * Heroku Link: https://vast-island-56203.herokuapp.com/
