@@ -15,7 +15,6 @@ class MessagesController < ApplicationController
     Message.create!({:content => content,
                      :event_id => event_id,
                      :user_id => user.id,
-
                      :date_posted => date_posted})
     
     redirect_back fallback_location: "/user/#{user}/event/#{event_id}/chat"
