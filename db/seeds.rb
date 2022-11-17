@@ -74,29 +74,9 @@ end
 # followers.each do |follower|
 #     Follower.create!(follower)
 # end
-# registrations = [{:user_id=>2,:event_id=>1},
-#         {:user_id=>1,:event_id=>3},
-#         {:user_id=>3,:event_id=>1},
-#         {:user_id=>4,:event_id=>3},
-#         {:user_id=>'sa4567',:event_id=>1},
-#         {:user_id=>'trj2122',:event_id=>3},
-#         {:user_id=>'sr5677',:event_id=4},
-#         {:user_id=>'rt6789',:event_id=>6},
-#         {:user_id=>'ds2387',:event_id=>8},
-#         {:user_id=>'br2346',:event_id=>8},
-#         {:user_id=>'sa4048',:event_id=>2},
-#         {:user_id=>'rt6789',:event_id=>2},
-#         {:user_id=>'jar2333',:event_id=>1},
-#         {:user_id=>'sa4084',:event_id=>2},
-#         {:user_id=>'sr5677',:event_id=>3},
-#         {:user_id=>'trj2122',:event_id=>4},
-#         {:user_id=>'ds2387',:event_id=>6},
-#         {:user_id=>'jar2333',:event_id=>7},
-#         {:user_id=>'rt6789',:event_id=>5},
-#         {:user_id=>'trj2122',:event_id=>8},
-#         {:user_id=>'sr5677',:event_id=>9},
-#         {:user_id=>'ds2387',:event_id=>10},
-# ]
+registrations = [{:user_id=>1,:event_id=>1},
+         {:user_id=>1,:event_id=>2},
+]
 # registrations.each do |registration|
 #     Registration.create!(registration)
 # end
