@@ -52,7 +52,6 @@ Given /I log in as (.*)$/ do |username|
     end
 
     steps %Q{
-        Given there is a user "#{username}" with password "password"
         And I am not logged in as "#{username}"
         Then I am in the login page
         Given I submit credentials "password" for user "#{username}"
