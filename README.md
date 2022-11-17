@@ -31,7 +31,7 @@ Testing Instructions
 * Run the rspec tests using```bundle exec rspec```
 
 Deployment instructions
-* Heroku Link: https://vast-island-56203.herokuapp.com/
+* Heroku Link: https://infinite-beyond-96203.herokuapp.com/
 Login Id: jar2333
 Password: password
 
