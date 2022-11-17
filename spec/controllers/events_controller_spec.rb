@@ -5,7 +5,7 @@ RSpec.describe EventsController, type: :controller do
     it "correctly redirects" do
       @u = User.new({:uni => 'jar2333', :id => 1})
       User.stub(:find_by_uni).with('jar2333').and_return(@u)
-      get :create, {:params => {:uni => "jar2333", :title => "TestCreateEvent", :description => "TestCreateDescription", :date_posted => "2022-10-22 10:00:00", :start_date => "2022-10-25 10:00:00", :end_date => "2022-10-25 12:00:00"}}
+      get :create, {:params => {:uni => "jar2333", :title => "TestCreateEvent", :description => "TestCreateDescription", :date_posted => "2022-10-22 10:00:00", :start_date => "2022-10-25", :end_date => "2022-10-25", :start_time => "10:00:00", :end_time => " 12:00:00"}}
       expect(response).to redirect_to(event_path(:uni => "jar2333", :id => Event.count))
     end
   end
