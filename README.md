@@ -23,8 +23,17 @@ Services (job queues, cache servers, search engines, etc.)
 * Follow/un-follow
 * Chat (post message for event)
 
+Testing Instructions
+Clear Database ```bin/rake db:drop```
+* ```bin/rake db:create```
+* ```bin/rake db:migrate```
+* ```bundle exec cucumber```
+* ```bundle exec rspec```
+
 Deployment instructions
-* Heroku Link: https://secret-ravine-76760.herokuapp.com/
+* Heroku Link: https://vast-island-56203.herokuapp.com/
+Login Id: jar2333
+Password: password
 
 Github Link
 * https://github.com/jar2333/EventAware/
