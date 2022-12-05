@@ -9,7 +9,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link" href="<%= home_path(@user) %>">My Events</a>
+      <a class="nav-link" href="<%= home_path(@user) %>">Home</a>
     </li>
     <li class="nav-item active">
       <a class="nav-link" href="<%= profile_path(@user) %>">Profile</a>
@@ -33,7 +33,7 @@
 </div>
 
 <%= 
-if @authenticated
+if @authenticated #&& @authenticated_uni != @name
   if !@following
     button_to "Follow", create_follower_path(@user, @authenticated_uni), method: :put, class: "btn btn-primary mb-4", id: "follow_button" 
   else
@@ -52,7 +52,7 @@ end
 
 </a>
 
-<h3>My Events</h3>
+<h3>Home</h3>
 <div class="container" style="margin: 10 0; padding: 0;" >
     <div class="events row">
       <% @myevents.each_with_index do |event, i| %>
