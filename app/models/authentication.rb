@@ -36,4 +36,8 @@ class Authentication < ActiveRecord::Base
        session_token == user_token
     end
 
+    def self.get_user(auth_token)
+        return find_by(auth_token: auth_token)
+    end
+
 end

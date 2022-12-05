@@ -1,15 +1,15 @@
-# And /I do( not)? follow "(.*)"/ do |n, uni|
+And /I do( not)? follow "(.*)"/ do |n, uni|
     
-# end
+end
 
-# And /"(.*)" does( not)? follow me/ do |uni, n|
+And /"(.*)" does( not)? follow me/ do |uni, n|
     
-# end
+end
 
-# And /I press the (name|image) of the user "(.*)" who I follow$/ do |option, uni|
+And /I press the (name|image) of the user "(.*)" who I follow$/ do |option, uni|
 
-# end
+end
 
-# And /I press the (name|image) of the user "(.*)" who follows me$/ do |option, uni|
+And /I press the (name|image) of the user "(.*)" who follows me$/ do |option, uni|
     
-# end
+end

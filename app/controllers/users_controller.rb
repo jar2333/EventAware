@@ -13,8 +13,28 @@ class UsersController < ApplicationController
 
   def profile
     @user = params[:uni]
-
     user = User.find_by(uni: @user)
+
+    #----------------------------------------------------------------------------
+    #this general piece of code can be added as precondition to every controller
+    if !session[:auth_token].nil?
+      token = session[:auth_token]
+      authenticated_user = Authentication.get_user(token)
+
+      if !authenticated_user.nil?
+        id = authenticated_user.id 
+        @authenticated_uni = authenticated_user.user.uni
+        @authenticated = true
+
+        #method specific assignment
+        @following = !Follower.find_by(user_id: user.id, follower_id: id).nil?
+      end
+    end
+    if @authenticated.nil?
+      @authenticated = false
+    end
+    #----------------------------------------------------------------------------
+    
 
     @name = user.name
     @email = @user + "@columbia.edu"

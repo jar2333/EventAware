@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_01_210752) do
+ActiveRecord::Schema.define(version: 2022_12_05_021115) do
 
   create_table "authentications", force: :cascade do |t|
     t.integer "user_id"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(version: 2022_11_01_210752) do
     t.datetime "start_date"
     t.datetime "end_date"
     t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "followers", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "follower_id"
+    t.index ["follower_id"], name: "index_followers_on_follower_id"
+    t.index ["user_id", "follower_id"], name: "index_followers_on_user_id_and_follower_id", unique: true
+    t.index ["user_id"], name: "index_followers_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
