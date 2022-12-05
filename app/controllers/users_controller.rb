@@ -6,7 +6,7 @@ class UsersController < ApplicationController
       @events = Event.all
     else
       search = params[:search]
-      @events = Event.where('title LIKE ?', "%#{search}%").all
+      @events = Event.where('LOWER (title) LIKE ?', "%#{search}%").all
     end
     render 'frontend/home'
   end
