@@ -27,6 +27,8 @@
 
 <div class="list-group">
     <% @following.each do |item| %>
-    <li class="list-group-item"><%= item %></li>
+    <li class="list-group-item">
+    <%= link_to item, profile_path(item) %>
+    </li>
     <% end %>
 </div>

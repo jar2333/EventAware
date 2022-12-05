@@ -47,19 +47,29 @@ class UsersController < ApplicationController
     render 'frontend/profile'
   end
 
-  # def following
-  #   @user = params[:uni]
+  def following
+    @user = params[:uni]
 
-  #   @following = Follower.where(follower_id: @user).pluck(:user_id)
-  #   render 'frontend/following'
-  # end
+    id = User.find_by(uni: @user)
 
-  # def followers
-  #   @user = params[:uni]
+    @following = Follower.where(follower_id: id).pluck(:user_id).map do |i|
+      User.find(i).uni
+    end
 
-  #   @followers = Follower.where(user_id: @user).pluck(:follower_id)
-  #   render 'frontend/follower'
-  # end
+    render 'frontend/following'
+  end
+
+  def followers
+    @user = params[:uni]
+
+    id = User.find_by(uni: @user)
+
+    @followers = Follower.where(user_id: id).pluck(:follower_id).map do |i|
+      User.find(i).uni
+    end
+
+    render 'frontend/follower'
+  end
 
   def new
   end
