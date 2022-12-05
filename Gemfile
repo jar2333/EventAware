@@ -41,7 +41,7 @@ gem 'jquery-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'simplecov', require: false, group: :test
-gem 'sqlite3', '~> 1.3.6'
+
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
