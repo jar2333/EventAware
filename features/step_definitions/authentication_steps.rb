@@ -5,27 +5,32 @@ end
 
 Given /I am( not)? logged in as "(.*)"/ do |not_logged, uni|
     #record exists
-    expect(User.find_by(uni: uni).authentication).to be_truthy
+    user = User.find_by(uni: uni)
 
-    #get user token
-    user_token = User.find_by(uni: uni).authentication.auth_token
+    if !user.nil?
+        #get user token
+        user_token = user.authentication.auth_token
 
-    #visit login page (remove this side effect?)
-    steps %Q{ Then I go to the index page }
+        #visit login page (remove this side effect?)
+        steps %Q{ Then I go to the index page }
 
-    #reading cookie
-    session = Capybara.current_session.driver.request.session
-    session_token = session[:auth_token]
+        #reading cookie
+        session = Capybara.current_session.driver.request.session
+        session_token = session[:auth_token]
 
-    if not_logged
-        #if session token exists, expect it to be different from the one in database
-        if not session_token.nil?
-            expect(session_token != user_token).to be true
+        if not_logged
+            #if session token exists, expect it to be different from the one in database
+            if not session_token.nil?
+                expect(session_token != user_token).to be true
+            end
+        else
+            #expect the client to have a correct session token
+            expect(session_token).not_to be_nil
+            expect(session_token == user_token).to be true
         end
+
     else
-        #expect the client to have a correct session token
-        expect(session_token).not_to be_nil
-        expect(session_token == user_token).to be true
+        expect(not_logged).to be_truthy
     end
 end
 

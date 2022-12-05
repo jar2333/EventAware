@@ -5,7 +5,12 @@
 # files.
 
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter "env.rb"
+  add_filter "paths.rb"
+  add_filter "selectors.rb"
+  add_filter "steps.rb"
+end
 
 require 'cucumber/rails'
 
