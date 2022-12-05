@@ -1,5 +1,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+<style>
+.left{
+  padding-left:10px;
+}
+</style>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">EventAware</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,19 +28,18 @@
     </form>
   </div>
 </nav>
-
 <div class="card-info" style="width:50%; height:50%">
-<h2 for="exampleInputEmail1">Event Name</h2>
+<h6 for="exampleInputEmail1">Event Name</h6>
 <p><%= @event_info .title %></p>
-<h2 for="exampleInputEmail1">Event Description</h2>
+<h6 for="exampleInputEmail1">Event Description</h6>
 <p><%= @event_info .description%></p>
-<h2 for="exampleInputEmail1">Event Start Date</h2>
+<h6 for="exampleInputEmail1">Event Start Date</h6>
 <p><%= @event_info .start_date%></p>
-<h2 for="exampleInputEmail1">Event End Date</h2>
+<h6 for="exampleInputEmail1">Event End Date</h6>
 <p><%= @event_info .end_date%></p>
-<h2 for="exampleInputEmail1">Date Posted</h2>
+<h6 for="exampleInputEmail1">Date Posted</h6>
 <p><%= @event_info .date_posted%></p>
-<h2 for="exampleInputEmail1">Organizer</h2>
+<h6 for="exampleInputEmail1">Organizer</h6>
 <p><%= link_to @event_info.organizer, profile_path(@event_info.organizer)%></p>
 
 
