@@ -33,7 +33,7 @@
 </div>
 
 <%= 
-if @authenticated #&& @authenticated_uni != @name
+if @authenticated && @authenticated_uni.strip != @name.strip
   if !@following
     button_to "Follow", create_follower_path(@user, @authenticated_uni), method: :put, class: "btn btn-primary mb-4", id: "follow_button" 
   else

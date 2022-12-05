@@ -48,7 +48,11 @@ else
 end 
 %>
 
-<%= button_to "Chat", { action: "chat" }, method: :get, class: "btn btn-primary btn-block mb-4", id: "chat_button" %>
+<%= 
+if @registered
+  button_to "Chat", { action: "chat" }, method: :get, class: "btn btn-primary btn-block mb-4", id: "chat_button" 
+end
+%>
 
 <%= 
 if @authenticated
