@@ -55,6 +55,7 @@
           <h5 class="card-title"><%= link_to event.title, event_path(@user, event.id) %></h6>
           <h6 class="card-title"><span>On: <%= event.start_date %></h6>
           <p class="card-text"> <%= event.description%> </p>
+          <h7 class="card-title">Organized by: <%= link_to event.organizer, profile_path(event.organizer)%></h7>
           <!-- a href="#/i/registration" class="btn btn-primary">Get Tickets</a -->
         </div>
       </div>
@@ -72,6 +73,7 @@
           <h5 class="card-title"><%= link_to event.title, event_path(@user, event.id) %></h6>
           <h6 class="card-title"><span>On: <%= event.start_date %></h6>
           <p class="card-text"> <%= event.description%> </p>
+          <h7 class="card-title">Organized by: <%= link_to event.organizer, profile_path(event.organizer)%></h7>
           <!-- a href="#/i/registration" class="btn btn-primary">Get Tickets</a -->
         </div>
       </div>
