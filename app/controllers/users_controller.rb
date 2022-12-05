@@ -39,10 +39,11 @@ class UsersController < ApplicationController
     @name = user.name
     @email = @user + "@columbia.edu"
 
-    @myevents = user.events
+    @myevents = Event.where(user_id: user.id)
 
-    # @attending_events = user.registrations
-    @attending_events = []
+    @attending_events = Registration.where(user_id: user.id).pluck(:event_id).map {|i|
+      Event.find(i)
+    }
 
     render 'frontend/profile'
   end
