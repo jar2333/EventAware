@@ -30,8 +30,8 @@ Rails.application.routes.draw do
   delete 'user/:uni', to: 'users#destroy'
 
   get 'user/:uni/followers', to: 'followers#index'
-  post 'user/:uni/followers', to: 'followers#create'
-  delete 'user/:uni/followers/:follower_uni', to: 'followers#destroy'
+  put 'user/:uni/followers/:follower_uni', to: 'followers#create', as: 'create_follower'
+  delete 'user/:uni/followers/:follower_uni', to: 'followers#destroy', as: 'delete_follower'
 
   get 'user/:uni/event/:id/message', to: 'messages#index'
   post 'user/:uni/event/:id/message', to: 'messages#create'

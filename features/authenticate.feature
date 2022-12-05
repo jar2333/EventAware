@@ -22,6 +22,12 @@ Scenario: Authentication failure
     Then I should be in the login page
     And I am not logged in as "jar2333"
 
+Scenario: Nonexistent user
+
+    Given I submit credentials "wrongpassword" for user "nonexistent_user"
+    Then I should be in the login page
+    And I am not logged in as "nonexistent_user"
+
 
 
 

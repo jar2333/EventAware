@@ -15,7 +15,13 @@ class Authentication < ActiveRecord::Base
     def self.verify(username, password)
         auth_hash = Digest::MD5.hexdigest password
 
-        auth = User.find_by(uni: username).authentication
+        user = User.find_by(uni: username)
+
+        if user.nil?
+            return nil
+        end
+
+        auth = user.authentication
 
         if auth.auth_hash == auth_hash
             return auth.auth_token
@@ -28,6 +34,10 @@ class Authentication < ActiveRecord::Base
        user_token = User.find_by(uni: username).authentication.auth_token
 
        session_token == user_token
+    end
+
+    def self.get_user(auth_token)
+        return find_by(auth_token: auth_token)
     end
 
 end
