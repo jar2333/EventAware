@@ -86,5 +86,4 @@ gem 'rails-controller-testing'
 group :production do
   gem 'pg', '~> 0.21' # for Heroku deployment
   gem 'rails_12factor'
-  gem 'sqlite3', '~> 1.3.13'
 end
