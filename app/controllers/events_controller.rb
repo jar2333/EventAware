@@ -31,12 +31,32 @@ class EventsController < ApplicationController
 
   def chat
     @user = params[:uni]
-
     @id = params[:id]
 
-    @chat = Message.where(event_id: @id)
+    #----------------------------------------------------------------------------
+    if !session[:auth_token].nil?
+      token = session[:auth_token]
+      authenticated_user = Authentication.get_user(token)
 
-    render 'frontend/chat'
+      if !authenticated_user.nil?
+        @authenticated = true
+
+        #method specific assignment
+        @registered = !Registration.where(user_id: authenticated_user.id, event_id: @id).empty?
+      end
+    end
+    if @authenticated.nil?
+      @authenticated = false
+    end
+    #----------------------------------------------------------------------------
+
+    if @registered
+      @chat = Message.where(event_id: @id)
+
+      render 'frontend/chat'
+    else
+      redirect_to :action => "info", :id => @id, :uni => @user
+    end
   end
 
   def index
