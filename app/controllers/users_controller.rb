@@ -73,12 +73,23 @@ class UsersController < ApplicationController
   end
 
   def new
+    render 'frontend/register'
   end
 
   def edit
   end
 
   def create
+    username = params[:uni]
+    name = params[:name]
+    password = params[:password]
+
+    User.create!(name: name, uni: username)
+    Authentication.make(username, password)
+
+    flash[:registered] = true
+
+    redirect_to login_path
   end
 
   def update

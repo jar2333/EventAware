@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'auth/new', to: 'authentications#new', as: 'login'
 
-  get 'user/new', to: 'users#new'
+  get 'user/new', to: 'users#new', as: 'new_user'
   get 'user/edit', to: 'users#edit'
 
   get 'user/:uni/home', to: 'users#home', as: 'home'
@@ -25,9 +25,9 @@ Rails.application.routes.draw do
   post 'auth', to: 'authentications#create', as: 'create_auth'
   delete 'auth', to: 'authentications#destroy', as: 'delete_auth'
 
-  post 'user', to: 'users#create'
-  put 'user/:uni', to: 'users#update'
-  delete 'user/:uni', to: 'users#destroy'
+  post 'user', to: 'users#create', as: 'create_user'
+  put 'user/:uni', to: 'users#update', as: 'update_user'
+  delete 'user/:uni', to: 'users#destroy', as: 'delete_user'
 
   get 'user/:uni/followers', to: 'followers#index'
   put 'user/:uni/followers/:follower_uni', to: 'followers#create', as: 'create_follower'

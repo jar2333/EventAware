@@ -20,6 +20,8 @@ class AuthenticationsController < ApplicationController
     uni = params[:uni]
     password = params[:password]
 
+    @registered = flash[:registered]
+
     auth_token = Authentication.verify(uni, password)
     if auth_token
       session[:auth_token] = auth_token
