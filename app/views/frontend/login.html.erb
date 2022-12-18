@@ -4,7 +4,7 @@
   <h1 class="mb-3">EventAware</h1>
   <h4 class="mb-3">Log-in</h4>
 
-  <% if defined? @registered %>
+  <% if @registered %>
   <div class="container" style="text-align: center; width: 50%">
     <div class="alert alert-primary" role="alert">
       New user registered!
@@ -12,7 +12,7 @@
   </div>
   <% end %>
   
-  <% if defined? @failed_login %>
+  <% if @failed_login %>
   <div class="container" style="text-align: center; width: 50%">
     <div class="alert alert-primary" role="alert">
       Incorrect credentials.
