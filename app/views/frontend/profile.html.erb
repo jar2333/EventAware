@@ -9,14 +9,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link" href="<%= home_path(@user) %>">Home</a>
+      <a class="nav-link" href="<%= home_path(@authenticated_uni) %>">Home</a>
     </li>
     <li class="nav-item active">
-      <a class="nav-link" href="<%= profile_path(@user) %>">Profile</a>
+      <a class="nav-link" href="<%= profile_path(@authenticated_uni) %>">Profile</a>
     </li>
     <li class="nav-item active">
-      <a class="nav-link" href="<%= new_event_path(@user) %>">Create New Event</a>
+      <a class="nav-link" href="<%= new_event_path(@authenticated_uni) %>">Create New Event</a>
     </li>
+    <% if @authenticated %>
+    <li class="nav-item active">
+      <%= link_to "Logout", delete_auth_path, method: :delete, class: "nav-link" %>
+    </li>
+  <% end %>
   </ul>
 
   </div>
@@ -33,7 +38,7 @@
 </div>
 
 <%= 
-if @authenticated && @authenticated_uni.strip != @name.strip
+if @authenticated && @authenticated_uni.strip != @user.strip
   if !@following
     button_to "Follow", create_follower_path(@user, @authenticated_uni), method: :put, class: "btn btn-primary mb-4", id: "follow_button" 
   else

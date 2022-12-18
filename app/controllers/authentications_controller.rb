@@ -25,11 +25,14 @@ class AuthenticationsController < ApplicationController
       session[:auth_token] = auth_token
       redirect_to home_path(uni)
     else
+      flash[:failed_login] = true
       redirect_to :action => "new"
     end
   end
 
   def new
+    @registered = flash[:registered]
+    @failed_login = flash[:failed_login]
     render 'frontend/login'
   end
 

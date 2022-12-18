@@ -42,6 +42,7 @@ users = [
 users.each do |user|
     User.create!(user)
 end
+
 authentications = [
         {:uni=>'jar2333',:password=>"password"},
         {:uni=>'sa4084', :password=>"password1"},

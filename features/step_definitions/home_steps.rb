@@ -12,5 +12,5 @@ Given /I search for "(.*)"/ do |search_term|
 end
 
 Then /I click the home tab/ do
-    steps %Q{ Then I follow "My Events" }
+    steps %Q{ Then I follow "Home" }
 end

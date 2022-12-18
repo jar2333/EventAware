@@ -15,26 +15,10 @@ class UsersController < ApplicationController
     @user = params[:uni]
     user = User.find_by(uni: @user)
 
-    #----------------------------------------------------------------------------
-    #this general piece of code can be added as precondition to every controller
-    if !session[:auth_token].nil?
-      token = session[:auth_token]
-      authenticated_user = Authentication.get_user(token)
-
-      if !authenticated_user.nil?
-        id = authenticated_user.id 
-        @authenticated_uni = authenticated_user.user.uni
-        @authenticated = true
-
-        #method specific assignment
-        @following = !Follower.find_by(user_id: user.id, follower_id: id).nil?
-      end
+    if @authenticated
+      id = @authenticated_id
+      @following = !Follower.find_by(user_id: user.id, follower_id: id).nil?
     end
-    if @authenticated.nil?
-      @authenticated = false
-    end
-    #----------------------------------------------------------------------------
-    
 
     @name = user.name
     @email = @user + "@columbia.edu"
@@ -73,12 +57,23 @@ class UsersController < ApplicationController
   end
 
   def new
+    render 'frontend/register'
   end
 
   def edit
   end
 
   def create
+    username = params[:uni]
+    name = params[:name]
+    password = params[:password]
+
+    User.create!(name: name, uni: username)
+    Authentication.make(username, password)
+
+    flash[:registered] = true
+
+    redirect_to login_path
   end
 
   def update

@@ -31,9 +31,15 @@ Testing Instructions
 * Run the rspec tests using```bundle exec rspec```
 
 Deployment instructions
-* Heroku Link: https://infinite-beyond-96203.herokuapp.com/
-Login Id: jar2333
-Password: password
+* Heroku Link: https://secret-ravine-76760.herokuapp.com/
+* Login Id: jar2333
+* Password: password
 
 Github Link
 * https://github.com/jar2333/EventAware/
+
+Project Demo URL:
+* https://www.youtube.com/watch?v=y2G1XMf4N3k
+
+Slide Deck for Project Demo:
+* https://drive.google.com/file/d/1GsCRRDxZDes52ek0c7sEtPgydSYxW_vg/view?usp=sharing
