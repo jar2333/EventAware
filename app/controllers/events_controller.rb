@@ -33,22 +33,9 @@ class EventsController < ApplicationController
     @user = params[:uni]
     @id = params[:id]
 
-    #----------------------------------------------------------------------------
-    if !session[:auth_token].nil?
-      token = session[:auth_token]
-      authenticated_user = Authentication.get_user(token)
-
-      if !authenticated_user.nil?
-        @authenticated = true
-
-        #method specific assignment
-        @registered = !Registration.where(user_id: authenticated_user.id, event_id: @id).empty?
-      end
+    if @authenticated
+      @registered = !Registration.where(user_id: @authenticated_id, event_id: @id).empty?
     end
-    if @authenticated.nil?
-      @authenticated = false
-    end
-    #----------------------------------------------------------------------------
 
     if @registered
       @chat = Message.where(event_id: @id)
