@@ -17,6 +17,11 @@
       <li class="nav-item active">
         <a class="nav-link" href="<%= new_event_path(@authenticated_uni) %>">Create New Event</a>
       </li>
+      <% if @authenticated %>
+        <li class="nav-item active">
+          <%= link_to "Logout", delete_auth_path, method: :delete, class: "nav-link" %>
+        </li>
+      <% end %>
     </ul>
     <form action="<% home_path(@authenticated_uni) %>" class="form-inline my-2 my-lg-0" method="GET">
       <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
