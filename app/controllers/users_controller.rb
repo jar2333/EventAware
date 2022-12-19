@@ -35,11 +35,7 @@ class UsersController < ApplicationController
   def following
     @user = params[:uni]
 
-    id = User.find_by(uni: @user)
-
-    @following = Follower.where(follower_id: id).pluck(:user_id).map do |i|
-      User.find(i).uni
-    end
+    @following = Follower.get_following(@user)
 
     render 'frontend/following'
   end
@@ -49,9 +45,7 @@ class UsersController < ApplicationController
 
     id = User.find_by(uni: @user)
 
-    @followers = Follower.where(user_id: id).pluck(:follower_id).map do |i|
-      User.find(i).uni
-    end
+    @followers = Follower.get_followers(@user)
 
     render 'frontend/follower'
   end
