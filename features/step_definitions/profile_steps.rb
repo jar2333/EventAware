@@ -30,4 +30,5 @@ Given /I click the profile button/ do
 end
 
 Then /I click the (un)?follow button/ do |un|
+    steps %Q{ Then I press "#{(un.to_s + 'follow').capitalize}" }
 end

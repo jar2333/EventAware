@@ -1,5 +1,9 @@
 And /I do( not)? follow "(.*)"/ do |n, uni|
-    
+    if n 
+        !Follower.follows?(uni, "jar2333")
+    else
+        Follower.follows?(uni, "jar2333")
+    end
 end
 
 And /"(.*)" does( not)? follow me/ do |uni, n|
