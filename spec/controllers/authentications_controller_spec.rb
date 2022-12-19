@@ -37,6 +37,8 @@ RSpec.describe AuthenticationsController, type: :controller do
 
   describe "GET #new" do
     it "returns http success" do
+      expect assigns(:registered)
+      expect assigns(:failed_login)
       get :new
       expect(response).to render_template('frontend/login')
     end
