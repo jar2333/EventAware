@@ -33,3 +33,9 @@ Scenario: Check that the following list is updated
     Then I view following list
     Then I should see "sa4084"
 
+Scenario: I unfollow a user
+    Given I now follow "sa4084"
+    Then I should be in the profile "sa4084"
+    And I click the unfollow button
+    Then I do not follow "sa4084"
+
