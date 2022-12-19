@@ -1,6 +1,10 @@
-Given /there is a user "(.*)" with password "(.*)"$/ do |username, password|
-    User.create!(name: "Jose", uni: username)
-    Authentication.make(username, password)
+Given /there (is|should be) a user "(.*)" with password "(.*)"$/ do |is, username, password|
+    if is == "is"
+        User.create!(name: "Jose", uni: username)
+        Authentication.make(username, password)
+    else
+        !User.where(uni: username).empty?
+    end
 end
 
 Given /I am( not)? logged in as "(.*)"/ do |not_logged, uni|
@@ -63,4 +67,16 @@ Given /I log in as (.*)$/ do |username|
         Then I should be in my home page
         And I am logged in as "#{username}"
     }
+end
+
+Given /I am in the registration page/ do
+    visit new_user_path
+end
+
+Given /I submit registration credentials "(.*)" for user "(.*)" with name "(.*)"/ do |credentials, user, name|
+    steps %Q{ Given I fill in "Username" with "#{user}" 
+              And I fill in "Password" with "#{credentials}" 
+              And I fill in "Name" with "#{name}" 
+              But I press "Register"
+            }
 end
