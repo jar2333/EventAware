@@ -24,4 +24,22 @@ RSpec.describe UsersController, type: :controller do
       expect(response).to render_template("frontend/profile")
     end
   end
+
+  describe "GET #following" do
+    it "sets variables and renders correct template" do
+      @u = User.new({:uni => 'jar2333', :id => '1', :uni => "jar2333", :name => "TestUser"})
+      User.stub(:find_by).with(uni: "jar2333").and_return(@u)
+      get :following, {:params => {:uni => "jar2333"}}
+      expect(response).to render_template("frontend/following")
+    end
+  end
+
+  describe "GET #following" do
+    it "sets variables and renders correct template" do
+      @u = User.new({:uni => 'jar2333', :id => '1', :uni => "jar2333", :name => "TestUser"})
+      User.stub(:find_by).with(uni: "jar2333").and_return(@u)
+      get :followers, {:params => {:uni => "jar2333"}}
+      expect(response).to render_template("frontend/follower")
+    end
+  end
 end
