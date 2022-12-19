@@ -21,8 +21,10 @@ Scenario: I register for an event, and it shows up on my profile
 Scenario: I unregister for an event, and it does not show up on my profile
 
     Given the event title is "Halloween Party"
+    And I am not registered
+    Then I click the register button
     And I am registered
-    But I click the register button
+    But I click the unregister button
     Then I am not registered
     And I click the profile button
     Then I should not see an event with title "Halloween Party"
