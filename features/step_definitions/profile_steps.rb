@@ -21,8 +21,8 @@ Given /I (should be|am) in (a|my) profile$/ do |my, check|
     end
 end
 
-Then /I view my (following|followers) list/ do |option|
-    steps %Q{ Then I press "#{option}" }
+Then /I view (following|followers) list/ do |option|
+    steps %Q{ Then I follow "#{option.capitalize}" }
 end
 
 Given /I click the profile button/ do

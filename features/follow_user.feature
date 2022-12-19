@@ -18,9 +18,18 @@ Scenario: I follow the profile
     Then I should be in the profile "sa4084"
     And I do follow "sa4084"
 
-@wip
 Scenario: Check that the follower list is updated
 
-@wip
+    Given I now follow "sa4084"
+    Then I should be in the profile "sa4084"
+    Then I view followers list
+    Then I should see "jar2333"
+
+
 Scenario: Check that the following list is updated
+
+    Given I now follow "sa4084"
+    Then I am in the profile "jar2333"
+    Then I view following list
+    Then I should see "sa4084"
 
