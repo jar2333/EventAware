@@ -42,6 +42,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'simplecov', require: false, group: :test
 
+gem 'web-console', '>= 3.3.0', group: :development
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -60,13 +61,9 @@ group :development, :test do
   gem 'ZenTest', '4.11.2'
 
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '~> 1.3.6'
-
-end
-
-group :development do
+  gem 'sqlite3', '~> 1.3.13'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  # gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
