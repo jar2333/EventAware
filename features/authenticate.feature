@@ -28,6 +28,14 @@ Scenario: Nonexistent user
     Then I should be in the login page
     And I am not logged in as "nonexistent_user"
 
+Scenario: I log out
+
+    Given I log in as jar2333
+    And I am in my home page
+    And I follow "Logout"
+    Then I am not logged in as "jar2333"
+
+
 
 
 

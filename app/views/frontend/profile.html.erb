@@ -48,11 +48,11 @@ end
 %>
 
 </form>
-<a href="./<%@user%>/profile/followers">
+<a href="<%= profile_followers_path(@user) %>">
 <button type="button" class="btn btn-secondary">Followers</button>
 
 </a>
-<a href="./<%@user%>/profile/following">
+<a href="<%= profile_following_path(@user) %>">
 <button type="button" class="btn btn-secondary">Following</button>
 
 </a>
