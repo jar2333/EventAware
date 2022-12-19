@@ -12,4 +12,10 @@ describe Authentication do
         Authentication.make("jar2333", "test_password")
         Authentication.verify("jar2333", "test_password_wrong").should be_nil
     end
+    it 'get user' do
+        @u = User.new({:id => 1, :uni => "jar2333"})
+        User.stub(:find_by).with(uni: "jar2333").and_return(@u)
+        Authentication.make("jar2333", "test_password")
+        Authentication.verify("jar2333", "test_password_wrong").should be_nil
+    end
 end  

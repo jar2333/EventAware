@@ -2,25 +2,23 @@ require 'rails_helper'
 
 RSpec.describe FollowersController, type: :controller do
 
-  # describe "GET #create" do
-  #   it "create entry in followers table" do
-  #     post :
-  #     expect(response).to have_http_status(:success)
-  #   end
-  # end
-
-  # describe "GET #create" do
-  #   it "returns http success" do
-  #     get :create
-  #     expect(response).to have_http_status(:success)
-  #   end
-  # end
-
-  # describe "GET #destroy" do
-  #   it "returns http success" do
-  #     get :destroy
-  #     expect(response).to have_http_status(:success)
-  #   end
-  # end
+  describe "GET #CREATE and #destroy" do
+    before :all do
+      if User.find_by("uni" => "jar2333").nil?
+        User.create({:uni => "jar2333", :id => 1})
+      end
+      if User.find_by("uni" => "sa4084").nil?
+        User.create({:uni => "sa4084", :id => 2})
+      end
+    end
+    it "redirects correctly in #CREATE" do
+      get :create, {:params => {:uni => "jar2333", :follower_uni => "sa4084"}}
+      expect(response).to redirect_to(profile_path(:uni => "jar2333"))
+    end
+    it "redirects correctly in #DESTROY" do
+      get :destroy, {:params => {:uni => "jar2333", :follower_uni => "sa4084"}}
+      expect(response).to redirect_to(profile_path(:uni => "jar2333"))
+    end
+  end
 
 end

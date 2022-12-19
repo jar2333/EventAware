@@ -471,9 +471,12 @@
           1,
           null,
           1,
+          1,
           null,
           null,
           null,
+          1,
+          1,
           1,
           1,
           null,
@@ -488,6 +491,29 @@
       "/home/codio/workspace/EventAware/app/controllers/application_controller.rb": {
         "lines": [
           1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          21,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          21,
+          20,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -618,12 +644,19 @@
           null,
           1,
           0,
+          0,
           null,
+          0,
+          0,
+          null,
+          null,
+          0,
           0,
           null,
           0,
           null,
           0,
+          null,
           null,
           null,
           1,
@@ -665,24 +698,22 @@
           null,
           1,
           null,
+          1,
+          1,
+          1,
+          0,
+          null,
+          1,
+          1,
           null,
           null,
+          1,
+          1,
+          1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          1,
+          1,
+          1,
           null,
           null,
           null,
@@ -695,16 +726,38 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
           1,
           null,
           null,
           1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
           null,
           null
         ]
       },
       "/home/codio/workspace/EventAware/spec/controllers/messages_controller_spec.rb": {
         "lines": [
+          null,
+          null,
           null,
           null,
           null,
@@ -740,12 +793,12 @@
           1,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null
@@ -767,14 +820,14 @@
           null,
           null,
           1,
-          0,
-          0,
+          1,
+          1,
           null,
-          0,
+          1,
           null,
-          0,
+          1,
           null,
-          0,
+          1,
           null,
           null,
           null
@@ -808,6 +861,24 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -828,41 +899,67 @@
           null,
           1,
           1,
-          null,
           1,
           null,
           1,
+          0,
+          0,
+          null,
+          null,
+          1,
           1,
           null,
           1,
           null,
-          null,
           1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          0,
           null,
           null,
           1,
           null,
           null,
           1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
           null,
           null,
           1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
           null,
           null,
           1,
@@ -1022,6 +1119,12 @@
           1,
           1,
           null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -1035,18 +1138,24 @@
           1,
           null,
           1,
-          2,
-          2,
-          2,
-          2,
+          3,
+          3,
+          3,
+          3,
           null,
           null,
           1,
-          1,
+          2,
           null,
-          1,
+          2,
           null,
-          1,
+          2,
+          0,
+          null,
+          null,
+          2,
+          null,
+          2,
           0,
           null,
           null,
@@ -1056,6 +1165,10 @@
           1,
           1,
           null,
+          1,
+          null,
+          null,
+          1,
           1,
           null,
           null,
@@ -1407,13 +1520,19 @@
           1,
           null
         ]
+      },
+      "/home/codio/workspace/EventAware/app/models/follower.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1670192072
+    "timestamp": 1671480939
   },
   "Cucumber Features": {
     "coverage": {
-      "/home/elaine/SaaS/EventAware/config/environment.rb": {
+      "/home/codio/workspace/EventAware/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -1422,7 +1541,7 @@
           1
         ]
       },
-      "/home/elaine/SaaS/EventAware/config/application.rb": {
+      "/home/codio/workspace/EventAware/config/application.rb": {
         "lines": [
           1,
           null,
@@ -1445,7 +1564,7 @@
           null
         ]
       },
-      "/home/elaine/SaaS/EventAware/config/boot.rb": {
+      "/home/codio/workspace/EventAware/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -1453,7 +1572,7 @@
           1
         ]
       },
-      "/home/elaine/SaaS/EventAware/config/environments/test.rb": {
+      "/home/codio/workspace/EventAware/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -1503,7 +1622,7 @@
           null
         ]
       },
-      "/home/elaine/SaaS/EventAware/config/initializers/application_controller_renderer.rb": {
+      "/home/codio/workspace/EventAware/config/initializers/application_controller_renderer.rb": {
         "lines": [
           null,
           null,
@@ -1515,7 +1634,7 @@
           null
         ]
       },
-      "/home/elaine/SaaS/EventAware/config/initializers/assets.rb": {
+      "/home/codio/workspace/EventAware/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -1533,7 +1652,7 @@
           null
         ]
       },
-      "/home/elaine/SaaS/EventAware/config/initializers/backtrace_silencers.rb": {
+      "/home/codio/workspace/EventAware/config/initializers/backtrace_silencers.rb": {
         "lines": [
           null,
           null,
@@ -1544,7 +1663,7 @@
           null
         ]
       },
-      "/home/elaine/SaaS/EventAware/config/initializers/content_security_policy.rb": {
+      "/home/codio/workspace/EventAware/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -1573,7 +1692,7 @@
           null
         ]
       },
-      "/home/elaine/SaaS/EventAware/config/initializers/cookies_serializer.rb": {
+      "/home/codio/workspace/EventAware/config/initializers/cookies_serializer.rb": {
         "lines": [
           null,
           null,
@@ -1582,7 +1701,7 @@
           1
         ]
       },
-      "/home/elaine/SaaS/EventAware/config/initializers/filter_parameter_logging.rb": {
+      "/home/codio/workspace/EventAware/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -1590,7 +1709,7 @@
           1
         ]
       },
-      "/home/elaine/SaaS/EventAware/config/initializers/inflections.rb": {
+      "/home/codio/workspace/EventAware/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -1610,7 +1729,7 @@
           null
         ]
       },
-      "/home/elaine/SaaS/EventAware/config/initializers/mime_types.rb": {
+      "/home/codio/workspace/EventAware/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -1618,7 +1737,7 @@
           null
         ]
       },
-      "/home/elaine/SaaS/EventAware/config/initializers/wrap_parameters.rb": {
+      "/home/codio/workspace/EventAware/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -1636,7 +1755,7 @@
           null
         ]
       },
-      "/home/elaine/SaaS/EventAware/config/routes.rb": {
+      "/home/codio/workspace/EventAware/config/routes.rb": {
         "lines": [
           1,
           null,
@@ -1688,7 +1807,7 @@
           null
         ]
       },
-      "/home/elaine/SaaS/EventAware/app/models/user.rb": {
+      "/home/codio/workspace/EventAware/app/models/user.rb": {
         "lines": [
           1,
           1,
@@ -1702,7 +1821,7 @@
           null
         ]
       },
-      "/home/elaine/SaaS/EventAware/app/models/authentication.rb": {
+      "/home/codio/workspace/EventAware/app/models/authentication.rb": {
         "lines": [
           1,
           1,
@@ -1737,32 +1856,32 @@
           null,
           null,
           1,
-          18,
+          0,
           null,
-          18,
+          0,
           null,
           null,
           1,
-          4,
+          14,
           null,
           null,
           null
         ]
       },
-      "/home/elaine/SaaS/EventAware/app/controllers/authentications_controller.rb": {
+      "/home/codio/workspace/EventAware/app/controllers/authentications_controller.rb": {
         "lines": [
           1,
           null,
           1,
-          31,
+          17,
           17,
           null,
-          14,
-          14,
+          0,
+          0,
           null,
-          14,
-          14,
-          14,
+          0,
+          0,
+          0,
           null,
           0,
           null,
@@ -1779,10 +1898,13 @@
           14,
           null,
           2,
+          2,
           null,
           null,
           null,
           1,
+          35,
+          35,
           35,
           null,
           null,
@@ -1793,213 +1915,172 @@
           null
         ]
       },
-      "/home/elaine/SaaS/EventAware/app/controllers/application_controller.rb": {
+      "/home/codio/workspace/EventAware/app/controllers/application_controller.rb": {
         "lines": [
           1,
-          null
-        ]
-      },
-      "/home/elaine/SaaS/EventAware/app/helpers/application_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/elaine/SaaS/EventAware/app/helpers/authentications_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/elaine/SaaS/EventAware/app/helpers/events_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/elaine/SaaS/EventAware/app/helpers/followers_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/elaine/SaaS/EventAware/app/helpers/messages_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/elaine/SaaS/EventAware/app/helpers/registrations_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/elaine/SaaS/EventAware/app/helpers/registrations_controller_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/elaine/SaaS/EventAware/app/helpers/users_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/elaine/SaaS/EventAware/app/controllers/users_controller.rb": {
-        "lines": [
-          1,
-          1,
-          38,
-          null,
-          38,
-          37,
-          null,
-          1,
-          1,
-          null,
-          38,
-          null,
-          null,
-          1,
-          4,
-          4,
-          null,
-          null,
-          null,
-          4,
-          4,
-          4,
-          null,
-          4,
-          4,
-          4,
-          4,
-          null,
-          null,
-          4,
-          null,
-          null,
-          4,
-          0,
-          null,
-          null,
-          null,
-          null,
-          4,
-          4,
-          null,
-          4,
-          null,
-          4,
-          2,
-          null,
-          null,
-          4,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/home/elaine/SaaS/EventAware/app/models/event.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
           null,
           1,
           null,
           1,
+          null,
+          1,
+          null,
+          null,
+          82,
+          14,
+          14,
+          null,
+          14,
+          14,
+          14,
+          14,
+          null,
+          null,
+          82,
           68,
           null,
           null,
-          1,
-          15,
-          15,
-          15,
-          15,
-          15,
-          15,
-          null,
-          15,
-          null,
-          15,
-          null,
-          15,
-          null,
-          null,
-          null,
-          15,
-          15,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ]
       },
-      "/home/elaine/SaaS/EventAware/app/controllers/events_controller.rb": {
+      "/home/codio/workspace/EventAware/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/EventAware/app/helpers/authentications_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/EventAware/app/helpers/events_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/EventAware/app/helpers/followers_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/EventAware/app/helpers/messages_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/EventAware/app/helpers/registrations_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/EventAware/app/helpers/registrations_controller_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/EventAware/app/helpers/users_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/EventAware/app/controllers/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          14,
+          null,
+          14,
+          14,
+          null,
+          0,
+          0,
+          null,
+          14,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/EventAware/app/models/event.rb": {
         "lines": [
           1,
           1,
@@ -2008,117 +2089,16 @@
           null,
           null,
           1,
-          1,
-          1,
-          1,
-          null,
           null,
           1,
-          18,
-          null,
-          null,
-          18,
-          18,
-          18,
-          null,
-          18,
-          null,
-          18,
-          18,
-          null,
-          null,
-          18,
-          null,
-          18,
+          0,
           null,
           null,
           1,
           0,
           0,
-          null,
-          null,
           0,
           0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/elaine/SaaS/EventAware/app/models/registration.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/elaine/SaaS/EventAware/app/controllers/registrations_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          2,
-          2,
-          null,
-          2,
-          null,
-          2,
-          null,
-          2,
-          null,
-          null,
-          1,
           0,
           0,
           null,
@@ -2129,16 +2109,37 @@
           0,
           null,
           null,
-          null
-        ]
-      },
-      "/home/elaine/SaaS/EventAware/app/models/follower.rb": {
-        "lines": [
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
           1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1671314401
+    "timestamp": 1671480908
   }
 }
