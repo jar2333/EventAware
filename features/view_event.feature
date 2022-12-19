@@ -25,7 +25,8 @@ Scenario: Go to event info for an event in profile page
 
 Scenario: Go to event info from the event's chat room
 
-    Given I click the event chat button
+    Given I click the register button
+    Then I click the event chat button
     Then I am at a chat page
     And I click the event button
     Then I should be at an event info page

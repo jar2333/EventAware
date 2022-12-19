@@ -10,6 +10,7 @@ Background: I am viewing the details of an event
     And I am in my home page
     And there does exist an event with organizer "jar2333", title "Halloween Party", description "hi", start date "12/31/2022", start time "11:59pm", end date "01/01/2023", end time "12:01am"
     And I am at an event info page
+    And I click the register button
 
 Scenario: I want to view the chat for the event
 
