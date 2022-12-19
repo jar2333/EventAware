@@ -45,9 +45,6 @@ RSpec.describe UsersController, type: :controller do
 
   describe "GET #create" do
     it "creates registration" do
-      # @user = User.create!(name: name, uni: username)
-      # @u = User.new({:uni => 'jar2333', :id => '1', :uni => "jar2333", :name => "TestUser"})
-      # User.stub(:find_by).with(uni: "jar2333").and_return(@u)
       get :create, {:params => {:name => "Test name", :uni => "jar2334", :password => "pswd"}}
       expect(response).to redirect_to(login_path)
     end
