@@ -8,6 +8,9 @@ class UsersController < ApplicationController
       search = params[:search]
       @events = Event.where('LOWER (title) LIKE ?', "%#{search}%").all
     end
+
+    @events = @events.filter_by_date
+
     render 'frontend/home'
   end
 
@@ -23,9 +26,9 @@ class UsersController < ApplicationController
     @name = user.name
     @email = @user + "@columbia.edu"
 
-    @myevents = Event.where(user_id: user.id)
+    @myevents = Event.where(user_id: user.id).filter_by_date
 
-    @attending_events = Registration.where(user_id: user.id).pluck(:event_id).map {|i|
+    @attending_events = Registration.joins(:event).where(user_id: user.id).where("end_date >= ?", Date.today).pluck(:event_id).map {|i|
       Event.find(i)
     }
 

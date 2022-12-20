@@ -6,6 +6,10 @@ class Event < ActiveRecord::Base
 
     has_one :users
 
+    def self.filter_by_date
+        where("end_date >= ?", Date.today)
+    end
+
     def organizer
         User.find(user_id).uni
     end
