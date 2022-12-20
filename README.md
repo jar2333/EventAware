@@ -19,6 +19,8 @@ Services (job queues, cache servers, search engines, etc.)
 * Search engine (filter events)
 * Create events
 * Edit events
+* Login
+* New user Registration
 * Visit user profile
 * Follow/un-follow
 * Chat (post message for event)
